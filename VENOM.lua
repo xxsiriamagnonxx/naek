@@ -16764,22 +16764,22 @@ end -- end msg
 function tdcli_update_callback(data)  -- clback
 if data.ID == "UpdateChannel" then 
 if data.channel_.status_.ID == "ChatMemberStatusKicked" then 
-bot_data:srem(ban_id..'Chek:Groups','-100'..data.channel_.id_)  
+database:srem(bot_id..'Chek:Groups','-100'..data.channel_.id_)  
 end
 end
 if data.ID == "UpdateNewCallbackQuery" then
 local Chat_id = data.chat_id_
-local From_id = data.id_
 local Msg_id = data.message_id_
 local msg_idd = Msg_id/2097152/0.5
-local DAata = data.payload_.data_
-if DAata and DAata:match("^(%d+):searchVid(.*)$") then
-id_from_user  = DAata:match("(%d+)")  
-local OnVid = DAata:gsub(':searchVid',''):gsub(id_from_user,'')
-msgidrp  = OnVid:match("(%d+)")
-local id_from_vid = DAata:gsub(':',''):gsub('searchVid',''):gsub(id_from_user,''):gsub(msgidrp,'')
-if tonumber(data.sender_user_id_) ~= tonumber(id_from_user) then  
-local notText = '⌯︙ عذرا الاوامر هذه لا تخصك'
+local text = data.payload_.data_
+Ok_id  = Text:match("(%d+)")  
+if text ==  'okCaptcha'..data.sender_user_id_ then  
+DeleteMessage(Chat_id, {[0] = Msg_id}) 
+return https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. Chat_id .. "&user_id="..Ok_id .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
+end
+if text ==  '/ven3' then
+if not CoSu(data) then
+local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
