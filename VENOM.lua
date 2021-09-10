@@ -3679,7 +3679,7 @@ send(msg.chat_id_, msg.id_,' ● تم تحديث السورس')
 dofile('VENOM.lua')  
 end
 
-if not bot_data:get(bot_id..'searchinbot'..msg.chat_id_) then
+if not bot_data:get(ban_id..'searchinbot'..msg.chat_id_) then
 if text and text:match('^بحث (.*)$') then 
 local TextSearch = text:match('^بحث (.*)$') 
 local msg_id = msg.id_/2097152/0.5
