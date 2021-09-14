@@ -3974,47 +3974,41 @@ end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
-╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
- [🚨╎𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 Aꫝꪑꫀᦔ𝅘𝅥𝅯](t.me/X_G_33)
-
- [⚙╎𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝙴𝙶𝚈𝙿𝚃](t.me/X_G_33)
- 
-  [⚡╎𝚁𝚄𝙽 𝚈𝙾𝚄𝚁 𝙱𝙾𝚃 𝚆𝙸𝚃𝙷 𝚄𝚂 𝙽𝙾𝚆](t.me/X_G_33)
-╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
- [◍ 𝐶𝐻 " 𝐵𝐴𝑅𝐿𝑂 𝑆𝑂𝑈𝑅𝐶𝐸 ◍](t.me/X_G_33)
- ──┈┈┈┄┄╌╌╌╌┄┄┈┈┈
+◍ 𝗧𝗛𝗘 𝗕𝗘𝗦𝗧 𝗘𝗚 𝗦𝗢𝗥𝗖𝗘 𝗜𝗡 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 ⶄ 
+🌖
+◍ 𝙎𝙐𝙍𝘾𝙀 𝙎𝙄𝙍𝙄𝘼 𝘽𝙀𝙎𝙏 𝙎𝙐𝙍𝘾𝙀 𖢝  🐾
+ᶠᵒˡˡᵒʷ ᵗʰᵉ ᵈᵉᵛᵉˡᵒᵖᵉʳ ᵇᵘᵗᵗᵒᶰˢ ᵇᵉˡᵒʷ ♰ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '•ᴍʏ ᴅᴇᴠ♪', callback_data="/units"},{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', callback_data="/theytry"}},   
 {{text = '♪مــطــور الــبــوت•', url="http://t.me/"..sudos.UserName}},
-{{text = '♪ ᥀ • أضف البوت لمجموعتك • ᥀ •' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
+{{text = '♪ اضغط لاضافه البوت لمجمعتك •' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/X_G_33/2107&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/X_G_33/1469&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 
 
-if text == 'سوريا' or text == 'Barlo' or text == 'barlo' then
+if text == 'سوريا' or text == 'Barlo' or text == 'احمد' then
 local Text = [[
-ᴘʀᴏɢʀᴀᴍᴍᴇʀ ʙᴀʀʟᴏ 𖡼
+ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝘴𝓲𝘳𝓲ꪖま 𖡼
 ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼
 ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ 𖡼
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '߷ • ᗪEᐯ ᗷᗩᖇᒪO • ߷',url="t.me/AHMED_MERO_love"}},
+{{text = 'Aꫝꪑꫀᦔ𝅘𝅥𝅯',url="t.me/AHMED_MERO_love"}},
 {{text = '•الــقــنــوات♪', callback_data="/Ajobanf"},{text = '•الــبــارات♪', callback_data="/banfai"}},  
 {{text = '•الــبــوتــات♪', callback_data="/gqjik"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/swry00/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/hjatwklas/5&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 
-if text == 'غزال' or text == 'حازم' or text == 'طافا' then
+if text == 'احمد كساحه' or text == 'كساحه' or text == 'مطور السورس' then
 local Text = [[
 ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝘬ꪖ𝘴ꪖꫝꪖ 𝅘𝅥𝅮 𖡼
 ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼
@@ -4022,12 +4016,12 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀ 𖡼 𝐆8𝐀𝐙𝐀𝐋 𖡼 ᥀',url="t.me/MR_AAS"}},
+{{text = '᥀ 𖡼 𝘬ꪖ𝘴ꪖꫝꪖ 𝅘𝅥𝅮 𖡼 ᥀',url="t.me/MR_AAS"}},
 {{text = '•الــقــنــوات♪', callback_data="/Ajotaff"},{text = '•الــبــارات♪', callback_data="/taffai"}},  
 {{text = '•الــبــوتــات♪', callback_data="/tofgqjik"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/swry00/13&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/hjatwklas/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 
@@ -15402,7 +15396,7 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 stast . #stast . 🇪🇬
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
-👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
+👳🏼‍♂ - 𝄬 msgs . #msgs . ??🇬
 👳🏼‍♂ - 𝄬 𝗖𝗛 - 『@X_G_33』 ᥀.
 ]],
 [[
@@ -21403,7 +21397,7 @@ send(msg.chat_id_, msg.id_,xl)
 bot_data:del(ban_id..":"..msg.sender_user_id_..":rjo_Bots"..msg.chat_id_)
 end
 if text == "ميرو" then
-local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
+local TEXT_SUD = bot_data:get(bot_id..'Tshake:TEXT_SUDO')
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
