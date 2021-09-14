@@ -5146,14 +5146,14 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 if text == 'قناة السورس' then
 local Text = [[ 
-[𖢅 wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴄʜ•ʙᴀʀʟᴏ ѕᴏụʀᴄᴇ 𖢅](t.me/X_G_33)
+[𖢅 wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴄʜ 𖢅](t.me/X_G_33)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '⇣ 𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ ⇣', url="t.me/X_G_33"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/swry00/5&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/X_G_33&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == '○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○' then
 local Text = [[ 
@@ -15396,7 +15396,7 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 stast . #stast . 🇪🇬
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
-👳🏼‍♂ - 𝄬 msgs . #msgs . ??🇬
+👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
 👳🏼‍♂ - 𝄬 𝗖𝗛 - 『@X_G_33』 ᥀.
 ]],
 [[
@@ -21397,7 +21397,7 @@ send(msg.chat_id_, msg.id_,xl)
 bot_data:del(ban_id..":"..msg.sender_user_id_..":rjo_Bots"..msg.chat_id_)
 end
 if text == "ميرو" then
-local TEXT_SUD = bot_data:get(bot_id..'Tshake:TEXT_SUDO')
+local TEXT_SUD = bot_data:get(ban_id..'Tshake:TEXT_SUDO')
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
