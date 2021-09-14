@@ -5215,7 +5215,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/X_G_33&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text and (text == "ريمكس" or text == "↫ ريمكس ♡") and not bot_data:get(ban_id..'ban:Remix:ban'..msg.chat_id_) and ChCheck(msg) then
+if text and (text == "ريمكس" or text == "↫ ريمكس ♡") and not bot_data:get(ban_id..'ban:Remix:ban'..msg.chat_id_) then
 ban = math.random(2,612); 
 local Text ='*♡︙تم اختيار الريمكس لك*'
 keyboard = {}  
@@ -5225,7 +5225,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/RemixDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text and (text == "صوره" or text == "↫ صوره ♡") and not bot_data:get(ban_id..'ban:Photo:ban'..msg.chat_id_) and ChCheck(msg) then
+if text and (text == "صوره" or text == "↫ صوره ♡") and not bot_data:get(ban_id..'ban:Photo:ban'..msg.chat_id_) then
 ban = math.random(4,1122); 
 local Text ='*♡︙تم اختيار الصوره لك*'
 keyboard = {}  
@@ -5235,7 +5235,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/PhotosDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text and (text == "انمي" or text == "↫ انمي ♡") and not bot_data:get(ban_id..'ban:Anime:ban'..msg.chat_id_) and ChCheck(msg) then
+if text and (text == "انمي" or text == "↫ انمي ♡") and not bot_data:get(ban_id..'ban:Anime:ban'..msg.chat_id_) then
 ban = math.random(3,1002); 
 local Text ='*♡︙تم اختيار صورة الانمي لك*'
 keyboard = {}  
@@ -5245,7 +5245,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AnimeDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text and (text == "فلم" or text == "↫ فلم ♡") and not bot_data:get(ban_id..'ban:Movies:ban'..msg.chat_id_) and ChCheck(msg) then
+if text and (text == "فلم" or text == "↫ فلم ♡") and not bot_data:get(ban_id..'ban:Movies:ban'..msg.chat_id_) then
 ban = math.random(45,125); 
 local Text ='*♡︙تم اختيار الفلم لك*'
 keyboard = {}  
@@ -5255,7 +5255,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MoviesDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text and (text == "مسلسل" or text == "↫ مسلسل ♡") and not bot_data:get(ban_id..'ban:Series:ban'..msg.chat_id_) and ChCheck(msg) then
+if text and (text == "مسلسل" or text == "↫ مسلسل ♡") and not bot_data:get(ban_id..'ban:Series:ban'..msg.chat_id_) then
 ban = math.random(2,54); 
 local Text ='*♡︙تم اختيار المسلسل لك*'
 keyboard = {}  
@@ -14225,7 +14225,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⇣ 𝘴𝓲??𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ ⇣', url="t.me/X_G_33"}},
+{{text = '⇣ 𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ ⇣', url="t.me/X_G_33"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/D_V1_D/96&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -16125,7 +16125,7 @@ Msᴀɢ ~ #msgs
 𓄼 ᴜѕᴇ : #username ♕
 𓄼 ѕᴛᴀ : #stast  ☥
 𓄼 ɪᴅ : #id ‌‌‏⚚
-𓄼 ᴍѕɢ : #msgs 𓆊 
+?? ᴍѕɢ : #msgs 𓆊 
 𓐀 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𓀃.
 𓄼 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
