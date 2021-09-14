@@ -1658,7 +1658,7 @@ if not msa3d(msg) then
 if not Devban(msg) then
 local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'سوريا') 
 local VENOM_Msg = { 
-' ـــــــــــــــــــــــــــــــــــــــــــــــ\n   🤖╖ أهلآ بك عزيزي أنا بوت  '..Namebot..'\n🌐╢ وظيفتي حماية المجموعات\n✅╢ لتفعيل البوت عليك اتباع مايلي \n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╜ سيتم ترقيتك مالك في البوت\nــــــــــــــــــــــــــــــــــــــــــــــــــــ ',
+' ♡︙مرحبا انا بوت اسمي "..NameBot.."\n♡︙اختصاصي حماية المجموعات\n♡︙من التفليش والسبام والخخ .. . ،\n♡︙تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر ↫ تفعيل\n♡︙سيتم رفع الادمنيه والمنشئ تلقائيا\n♡︙ارسل امر /free او /play للتمتع باوامر الاعضاء ',
 } 
 Namebot = VENOM_Msg[math.random(#VENOM_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
@@ -1687,6 +1687,66 @@ end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 end
+end
+if text == '↫ الاوامر الخدميه ♡' or text == '/play' or text == '↫  رجوع  ♡' or text == 'اوامر الخدميه' or text == '/free' then
+local Sudo_Welcome = '♡︙اهلا بك مجددا عزيزي \n♡︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس سوريا فقط اضغط على الامر الذي تريد تنفيذه'
+local key = {
+{'↫ اوامر التسليه ♡','↫ الاوامر الخدميه  ♡'},
+{'↫ اوامر النسب ♡','↫ البوتات ♡'},
+{'↫ العاب ♡'},
+{'↫  السورس ♡','↫  المطور ♡'},
+{'↫ رجوع ♡'},
+}
+SendInline(msg.chat_id_,Sudo_Welcome,key)
+return false
+end
+if text == '↫ اوامر التسليه ♡' then 
+local Sudo_Welcome = '♡︙اهلا بك مجددا عزيزي \n♡︙اليك الازرار الخاصه بأوامر التسليه الخاصه بسورس سوريا فقط اضغط على الامر الذي تريد تنفيذه'
+local key = {
+{'↫ غنيلي ♡','↫ اغنيه ♡'},
+{'↫ ميمز ♡','↫ ريمكس ♡'},
+{'↫ صوره ♡','↫ متحركه ♡'},
+{'↫ مسلسل ♡','↫ فلم ♡'},
+{'↫  رجوع  ♡'},
+}
+SendInline(msg.chat_id_,Sudo_Welcome,key)
+return false
+end
+if text == '↫ الاوامر الخدميه  ♡' then 
+local Sudo_Welcome = '♡︙اهلا بك مجددا عزيزي \n♡︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس سوريا فقط اضغط على الامر الذي تريد تنفيذه'
+local key = {
+{'↫ الابراج ♡','↫ حساب العمر ♡'},
+{'↫ الزخرفه ♡','↫ معاني الاسماء ♡'},
+{'↫ الحمايه ♡'},
+{'↫  معرفي ♡','↫  اسمي ♡','↫ ايديي ♡'},
+{'↫  نبذتي ♡','↫ نبذا ♡'},
+{'↫  رجوع  ♡'},
+}
+SendInline(msg.chat_id_,Sudo_Welcome,key)
+return false
+end
+if text == '↫ البوتات ♡' then 
+local Sudo_Welcome = '♡︙اهلا بك مجددا عزيزي \n♡︙اليك الازرار الخاصه بأوامر البوتات الخاصه بسورس سوريا فقط اضغط على الامر الذي تريد تنفيذه'
+local key = {
+{'↫ بوت الحذف ♡','↫ بوت الهمسه ♡'},
+{'↫ بوت اليوتيوب ♡','↫ بوت الكت ♡'},
+{'↫ بوت الزخرفه ♡'},
+{'↫  رجوع  ♡'},
+}
+SendInline(msg.chat_id_,Sudo_Welcome,key)
+return false
+end
+if text == '↫ اوامر النسب ♡' then 
+local Sudo_Welcome = '♡︙اهلا بك مجددا عزيزي \n♡︙اليك الازرار الخاصه بأوامر النسب الخاصه بسورس سوريا فقط اضغط على الامر الذي تريد تنفيذه'
+local key = {
+{'↫ نسبه الكره ♡','↫ نسبه الحب ♡'},
+{'↫ نسبه الرجوله ♡','↫ نسبه الانوثه ♡'},
+{'↫ نسبه الغباء ♡','↫ نسبه الجمال ♡'},
+{'↫ نسبه الخيانه ♡'},
+{'↫  رجوع  ♡'},
+}
+SendInline(msg.chat_id_,Sudo_Welcome,key)
+return false
 end
 --------------------------------------------------------------------------------------------------------------
 
@@ -5154,6 +5214,56 @@ keyboard.inline_keyboard = {
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/X_G_33&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text and (text == "ريمكس" or text == "↫ ريمكس ♡") and notbot_data:get(ban_id..'ban:Remix:ban'..msg.chat_id_) and ChCheck(msg) then
+ban = math.random(2,612); 
+local Text ='*♡︙تم اختيار الريمكس لك*'
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '♡ Siria team .',url="t.me/X_G_33"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/RemixDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text and (text == "صوره" or text == "↫ صوره ♡") and notbot_data:get(ban_id..'ban:Photo:ban'..msg.chat_id_) and ChCheck(msg) then
+ban = math.random(4,1122); 
+local Text ='*♡︙تم اختيار الصوره لك*'
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '♡ Siria team .',url="t.me/X_G_33"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/PhotosDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text and (text == "انمي" or text == "↫ انمي ♡") and notbot_data:get(ban_id..'ban:Anime:ban'..msg.chat_id_) and ChCheck(msg) then
+ban = math.random(3,1002); 
+local Text ='*♡︙تم اختيار صورة الانمي لك*'
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '♡ Siria team .',url="t.me/X_G_33"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AnimeDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text and (text == "فلم" or text == "↫ فلم ♡") and notbot_data:get(ban_id..'ban:Movies:ban'..msg.chat_id_) and ChCheck(msg) then
+ban = math.random(45,125); 
+local Text ='*♡︙تم اختيار الفلم لك*'
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '♡ Siria team .',url="t.me/X_G_33"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MoviesDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text and (text == "مسلسل" or text == "↫ مسلسل ♡") and notbot_data:get(ban_id..'ban:Series:ban'..msg.chat_id_) and ChCheck(msg) then
+ban = math.random(2,54); 
+local Text ='*♡︙تم اختيار المسلسل لك*'
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '♡ Siria team .',url="t.me/X_G_33"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SeriesDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == '○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○' then
 local Text = [[ 
