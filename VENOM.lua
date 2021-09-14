@@ -5253,7 +5253,7 @@ keyboard.inline_keyboard = {
 {{text = '♡ Siria team .',url="t.me/X_G_33"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MoviesDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MoviesDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text and (text == "مسلسل" or text == "↫ مسلسل ♡") and not bot_data:get(ban_id..'ban:Series:ban'..msg.chat_id_) then
 ban = math.random(2,54); 
@@ -16125,7 +16125,7 @@ Msᴀɢ ~ #msgs
 𓄼 ᴜѕᴇ : #username ♕
 𓄼 ѕᴛᴀ : #stast  ☥
 𓄼 ɪᴅ : #id ‌‌‏⚚
-?? ᴍѕɢ : #msgs 𓆊 
+𓄼 ᴍѕɢ : #msgs 𓆊 
 𓐀 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𓀃.
 𓄼 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
