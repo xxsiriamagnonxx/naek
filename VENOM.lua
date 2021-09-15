@@ -14625,10 +14625,7 @@ keyboard.inline_keyboard = {
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-end,nil)
-end
+end 
 
 if text == 'تفعيل رتبتي' and Manager(msg) then   
 if bot_data:get(ban_id..'ghiktr'..msg.chat_id_)  then
@@ -16109,13 +16106,13 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
 👳🏼‍♂ - 𝄬 stast . #stast . 🇪🇬
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
-??🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
+👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
 👳🏼‍♂ - 𝄬 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
 [[
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
-➮- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯. 💕
+➮- 𝐮𝐬𝐞??𓂅 #username 𓍯. 💕
 ➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
 ➭- 𝐢𝐝 𓂅 #id 𓍯. 💕
 ➭- 𝗖𝗛 - 『@X_G_33』 ᥀
