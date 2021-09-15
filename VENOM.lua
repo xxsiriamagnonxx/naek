@@ -14626,25 +14626,6 @@ Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Help or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == 'تفعيل رتبتي' and Manager(msg) then   
-if bot_data:get(ban_id..'ghiktr'..msg.chat_id_)  then
-bot_data:del(ban_id..'ghiktr'..msg.chat_id_) 
-Text = '\n ᥀ تم تفعيل رتبتي' 
-else
-Text = '\n ᥀  بالتاكيد تم تفعيل رتبتي'
-end
-send(msg.chat_id_, msg.id_,Text) 
-end
-if text == 'تعطيل رتبتي' and Manager(msg) then  
-if not bot_data:get(ban_id..'ghiktr'..msg.chat_id_)  then
-bot_data:set(ban_id..'ghiktr'..msg.chat_id_,true) 
-Text = '\n ᥀ تم تعطيل رتبتي' 
-else
-Text = '\n ᥀ بالتاكيد تم تعطيل رتبتي'
-end
-send(msg.chat_id_, msg.id_,Text) 
-end
-
 if text == "انا مين" then
 local my_ph = bot_data:get(ban_id.."my_anamen:status"..msg.chat_id_)
 if not my_ph then
