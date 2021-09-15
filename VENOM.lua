@@ -14608,11 +14608,7 @@ end
 
 if text == 'رتبتي' then
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-local function getpro(extra, result, success)
-keyboard = {} 
-keyboard.inline_keyboard = {text = ''..rtp..' ',url="t.me/"..Queen or X_G_33}
-local Msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. GRank .."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+send(msg.chat_id_, msg.id_,'✭︙ رتبتك في البوت » '..rtp)
 end
 
 if text == 'تفعيل رتبتي' and Manager(msg) then   
@@ -18659,8 +18655,6 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = '𝐌𝐄𝐑𝐎𖣏',url="t.me/SY_RI_Abot"}},
 {{text = '𝘴𝓲𝘳𝓲ꪖ ',url="t.me/SIRIA73_bot"}},
-{{text = '𖣐 𝒃𝒂𝒓𝒍𝒐 𝒍𝒊𝒔𝒕 𖣐',url="t.me/BARLO_BOST_bot"}},
-{{text = '𖣐 𝒕𝒂𝒇𝒂 𝒍𝒊𝒔𝒕 𖣐',url="t.me/L_gazal_bot"}},
 {{text = '᥀𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
