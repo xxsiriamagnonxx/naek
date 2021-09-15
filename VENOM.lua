@@ -14623,6 +14623,7 @@ keyboard.inline_keyboard = {
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end end 
@@ -15198,7 +15199,7 @@ local List = {
 ⌔➺: 𝗖𝗛 - 『@X_G_33』 ᥀.
 ]],
 [[
- ᥀ - 𝓾𝓼𝓮𝓻 ➪ #username ᥀.
+ ᥀ - 𝓾??𝓮𝓻 ➪ #username ᥀.
  ᥀ - ??𝓽𝓪𝓼𝓽  ➪ #stast ᥀.
  ᥀ - 𝓲𝓭 ➪ #id ⸙ ᥀.
  ᥀ - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙ ᥀.
@@ -15213,7 +15214,7 @@ local List = {
  - 𝄬 𝗖𝗛 - 『@X_G_33』 ᥀.
 ]],
 [[
-◣: 𝒔𝒕𝒂𓂅 #stast ??➥♡.
+◣: 𝒔𝒕𝒂𓂅 #stast 𓍯➥♡.
 ◣: 𝐮𝐬𝐞𝐫𓂅 #username 𓍯➥♡.
 ◣: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➥♡.
 ◣: 𝐢𝐝 𓂅 #id 𓍯➥♡.
