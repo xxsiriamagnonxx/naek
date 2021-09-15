@@ -14612,7 +14612,7 @@ local textt = ' 🌚❤️ رتبتك في البوت⤌ '..Rutba(msg.sender_use
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = textt, url="http://t.me/"..username},
+{text = textt, url="http://t.me/"..rtp..},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -16120,7 +16120,7 @@ Msᴀɢ ~ #msgs
 [[
 𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
 𝐓𝐓• 𝐌𝐬𝐠𝐒 𖠰 #msgs .
-𝐓𝐓• 𝐔𝐬𝐞𝐫𝐍𝐚 𖠰 #username .
+𝐓𝐓• 𝐔𝐬??𝐫𝐍𝐚 𖠰 #username .
 𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
 𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
 𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
