@@ -1688,7 +1688,7 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, l
 end
 end
 end
-if text == '↫ الاوامر الخدميه ♡' or text == '/play' or text == '↫  رجوع  ♡' or text == 'اوامر الخدميه' or text == '/free' then
+if text == '↫ الاوامر الخدميه ♡' or text == 'فتح الكيب' or text == '↫  رجوع  ♡' or text == 'اوامر الخدميه' or text == '/free' then
 local Sudo_Welcome = '♡︙اهلا بك مجددا عزيزي \n♡︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس سوريا فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اوامر التسليه ♡','سوريا'},
@@ -16100,7 +16100,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
 [[
-ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪?? ꙰
+ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
 ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast 🇪🇬 ꙰
 ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
