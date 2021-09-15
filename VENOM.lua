@@ -5228,12 +5228,18 @@ Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ من خلال البوت يمكنك م
 if text == "عدد المسح" or text == "تعين عدد المسح" or text == "تعيين عدد المسح" then  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ فقط قم بارسال امر عدد المسح + عدد المسح \n♡︙ مثال : عدد المسح 100', 1, 'md') end
 if text == "انطق" then
 Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ فقط قم بارسال امر انطق + الكلمه\n♡︙سيقوم البوت بنطق الكلمه \n♡︙ مثال : انطق هلو', 1, 'md') end
-if text == "يوتيوب" and  or text == "اليوتيوب" and  or text == "↫ بوت اليوتيوب ♡" and  or text == "بوت اليوتيوب" and  or text == "اريد بوت يوتيوب" and  or text == "شمرلي بوت يوتيوب" and  or text == "يوت" and  then local inline = {{{text="اضغط هنا",url="https://t.me/Qeaa_bot"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على بوت اليوتيوب*',nil,inline) return false end
-if text == "اهمس" and  or text == "↫ بوت الهمسه ♡" and  or text == "بوت الهمسه" and  or text == "همسه" and  or text == "اريد بوت الهمسه" and  or text == "دزلي بوت الهمسه" and  or text == "دزولي بوت الهمسه" and  then  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙@HMSEBOT\n♡︙@nnbbot\n♡︙@ocBot\n♡︙@hebot ', 1, 'md') end
-if text == "رابط حذف" and  or text == "رابط الحذف" and  or text == "اريد رابط الحذف" and  or text == "شمرلي رابط الحذف" and  or text == "اريد رابط حذف" and  then local inline = {{{text="اضغط هنا",url="https://t.me/LC6BOT"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على رابط الحذف*',nil,inline) return false end
-if text == "↫ بوت الحذف ♡" and  or text == "بوت الحذف" and  or text == "اريد بوت الحذف" and  or text == "اريد بوت حذف" and  or text == "بوت حذف" and  or text == "بوت حذف حسابات" and  or text == "راح احذف" and  then local inline = {{{text="اضغط هنا",url="https://t.me/LC6BOT"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على بوت الحذف*',nil,inline) return false end
-if text == "↫ بوت الكت ♡" and  or text == "بوت الكت" and  or text == "بوت كت" and  then local inline = {{{text="اضغط هنا",url="https://t.me/E93OBot"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على بوت الكت*',nil,inline) return false end
-if text == "↫ بوت الزخرفه ♡" and  or text == "بوت الزخرفه" and  or text == "بوت زخرفه" and  then local inline = {{{text="اضغط هنا",url="https://t.me/W55555535Bot"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على بوت الزخرفه*',nil,inline) return false end
+if text == "يوتيوب" and  or text == "اليوتيوب" and  or text == "↫ بوت اليوتيوب ♡" and  or text == "بوت اليوتيوب" and  or text == "اريد بوت يوتيوب" and  or text == "شمرلي بوت يوتيوب" and  or text == "يوت" and  then
+ local inline = {{{text="اضغط هنا",url="https://t.me/Qeaa_bot"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على بوت اليوتيوب*',nil,inline) return false end
+if text == "اهمس" and  or text == "↫ بوت الهمسه ♡" and  or text == "بوت الهمسه" and  or text == "همسه" and  or text == "اريد بوت الهمسه" and  or text == "دزلي بوت الهمسه" and  or text == "دزولي بوت الهمسه" and  then
+  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙@HMSEBOT\n♡︙@nnbbot\n♡︙@ocBot\n♡︙@hebot ', 1, 'md') end
+if text == "رابط حذف" and  or text == "رابط الحذف" and  or text == "اريد رابط الحذف" and  or text == "شمرلي رابط الحذف" and  or text == "اريد رابط حذف" and  then 
+local inline = {{{text="اضغط هنا",url="https://t.me/LC6BOT"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على رابط الحذف*',nil,inline) return false end
+if text == "↫ بوت الحذف ♡" and  or text == "بوت الحذف" and  or text == "اريد بوت الحذف" and  or text == "اريد بوت حذف" and  or text == "بوت حذف" and  or text == "بوت حذف حسابات" and  or text == "راح احذف" and  then 
+local inline = {{{text="اضغط هنا",url="https://t.me/LC6BOT"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على بوت الحذف*',nil,inline) return false end
+if text == "↫ بوت الكت ♡" and  or text == "بوت الكت" and  or text == "بوت كت" and  then
+ local inline = {{{text="اضغط هنا",url="https://t.me/E93OBot"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على بوت الكت*',nil,inline) return false end
+if text == "↫ بوت الزخرفه ♡" and  or text == "بوت الزخرفه" and  or text == "بوت زخرفه" and  then
+ local inline = {{{text="اضغط هنا",url="https://t.me/W55555535Bot"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على بوت الزخرفه*',nil,inline) return false end
 if text == "ايديي" and  or text == "↫ ايديي ♡" and  then Dev_ban(msg.chat_id_, msg.id_, 1,'♡︙ايديك ↫ ❨ `'..msg.sender_user_id_..'` ❩', 1, 'md') end
 -- Source siria --
 if text == 'نبذا' and  or text == '↫ نبذا ♡' then
@@ -15000,7 +15006,7 @@ local List = {
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
-- 𓏬 𝐈𝐃 : #id 𓂅 .
+- 𓏬 𝐈?? : #id 𓂅 .
 ]],
 [[
 .𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  
@@ -15883,7 +15889,7 @@ Msᴀɢ ~ #msgs
 ✶- 𝒔𝒕𝒂𓂅 #stast 𓍯↝❃ .
 ✶- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯↝❃.
 ✶- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯↝❃.
-✶- 𝐢𝐝 𓂅 #id 𓍯↝❃.
+✶- 𝐢𝐝 𓂅 #id ??↝❃.
 ✶- 𝗖𝗛 - 『@X_G_33』 ↝❃.
 ]],
 [[
