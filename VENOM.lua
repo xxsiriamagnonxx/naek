@@ -14607,7 +14607,6 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 
 if text == "رتبتي" and not bot_data:get(ban_id..'ghiktr'..msg.chat_id_) then     
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 if result.username_ then
 username = result.username_ 
 else
@@ -16112,7 +16111,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
-➮- 𝐮𝐬𝐞??𓂅 #username 𓍯. 💕
+➮- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯. 💕
 ➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
 ➭- 𝐢𝐝 𓂅 #id 𓍯. 💕
 ➭- 𝗖𝗛 - 『@X_G_33』 ᥀
