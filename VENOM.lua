@@ -5228,8 +5228,6 @@ Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ من خلال البوت يمكنك م
 if text == "عدد المسح" or text == "تعين عدد المسح" or text == "تعيين عدد المسح" then  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ فقط قم بارسال امر عدد المسح + عدد المسح \n♡︙ مثال : عدد المسح 100', 1, 'md') end
 if text == "انطق" then
 Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ فقط قم بارسال امر انطق + الكلمه\n♡︙سيقوم البوت بنطق الكلمه \n♡︙ مثال : انطق هلو', 1, 'md') end
-if text == "يوتيوب" and  or text == "اليوتيوب" and  or text == "↫ بوت اليوتيوب ♡" and  or text == "بوت اليوتيوب"then
- local inline = {{{text="اضغط هنا",url="https://t.me/Qeaa_bot"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على بوت اليوتيوب*',nil,inline) return false end
 if text == "اهمس" and  or text == "↫ بوت الهمسه ♡" and  or text == "بوت الهمسه" and  or text == "همسه" and  or text == "اريد بوت الهمسه" and  or text == "دزلي بوت الهمسه" and  or text == "دزولي بوت الهمسه" and  then
   Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙@HMSEBOT\n♡︙@nnbbot\n♡︙@ocBot\n♡︙@hebot ', 1, 'md') end
 if text == "رابط حذف" and  or text == "رابط الحذف" and  or text == "اريد رابط الحذف" and  or text == "شمرلي رابط الحذف" and  or text == "اريد رابط حذف" and  then 
