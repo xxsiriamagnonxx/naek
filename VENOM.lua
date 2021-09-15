@@ -14607,12 +14607,18 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 
 if text == 'رتبتي' or text == 'rutpty'  then
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+if result.username_ then
+username = result.username_ 
+else
+username = 'SOURCEVENOM'
+end
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
 local textt = ' 🌚❤️ رتبتك في البوت⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = textt, url="http://t.me/"..rtp..},
+{text = textt, url="http://t.me/"..username},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -15213,7 +15219,7 @@ local List = {
 ↣• MSG ➤  #msgs  ↝🍬.
 ↣• STA ➤  #stast  ↝🍬.
 ↣• iD ➤ #id  ↝🍬.
-↣• 𝗖𝗛 - 『@X_G_33』 ᥀.
+↣• 𝗖?? - 『@X_G_33』 ᥀.
 ]],
 [[
 ➫✿: S #stast ??➟♡.
@@ -16120,7 +16126,7 @@ Msᴀɢ ~ #msgs
 [[
 𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
 𝐓𝐓• 𝐌𝐬𝐠𝐒 𖠰 #msgs .
-𝐓𝐓• 𝐔𝐬??𝐫𝐍𝐚 𖠰 #username .
+𝐓𝐓• 𝐔𝐬𝐞𝐫𝐍𝐚 𖠰 #username .
 𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
 𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
 𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
