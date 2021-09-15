@@ -5215,13 +5215,19 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/X_G_33&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == "الابراج" or text == "↫ الابراج ♡" then  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ من خلال البوت يمكنك معرفه توقعات برجك \n♡︙ فقط قم بارسال امر برج + اسم البرج \n♡︙ مثال : برج الاسد ،\n♡︙ لمعرفه برجك قم بالرجوع الى قسم حساب العمر ', 1, 'md') end
+if text == "الابراج" or text == "↫ الابراج ♡" then 
+ Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ من خلال البوت يمكنك معرفه توقعات برجك \n♡︙ فقط قم بارسال امر برج + اسم البرج \n♡︙ مثال : برج الاسد ،\n♡︙ لمعرفه برجك قم بالرجوع الى قسم حساب العمر ', 1, 'md')
+ end
 if text == "حساب العمر" or text == "↫ حساب العمر ♡" then  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ من خلال البوت يمكنك حساب عمرك \n♡︙ فقط قم بارسال امر احسب + مواليدك الى البوت \n♡︙ بالتنسيق التالي مثال : احسب 2000/7/24', 1, 'md') end
-if text == "الحمايه" or text == "↫ الحمايه ♡" then  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ اضف البوت في المجموعه ثم قم برفعه مشرف وارسل تفعيل \n♡︙ وتمتع بخدمات غير موجوده في باقي البوتات ', 1, 'md') end
-if text == "الزخرفه" or text == "↫ الزخرفه ♡" then  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙قم بأرسال أمر زخرفه وثم ارسال الاسم الذي تريد زخرفته بألانكليزي أو العربي', 1, 'md') end
-if text == "معاني الاسماء" or text == "↫ معاني الاسماء ♡" then  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ من خلال البوت يمكنك معرفه معنى اسمك \n♡︙ فقط قم بارسال امر معنى اسم + الاسم \n♡︙ مثال : معنى اسم ريو', 1, 'md') end
+if text == "الحمايه" or text == "↫ الحمايه ♡" then 
+ Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ اضف البوت في المجموعه ثم قم برفعه مشرف وارسل تفعيل \n♡︙ وتمتع بخدمات غير موجوده في باقي البوتات ', 1, 'md') end
+if text == "الزخرفه" or text == "↫ الزخرفه ♡" then
+  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙قم بأرسال أمر زخرفه وثم ارسال الاسم الذي تريد زخرفته بألانكليزي أو العربي', 1, 'md') end
+if text == "معاني الاسماء" or text == "↫ معاني الاسماء ♡" then
+Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ من خلال البوت يمكنك معرفه معنى اسمك \n♡︙ فقط قم بارسال امر معنى اسم + الاسم \n♡︙ مثال : معنى اسم ريو', 1, 'md') end
 if text == "عدد المسح" or text == "تعين عدد المسح" or text == "تعيين عدد المسح" then  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ فقط قم بارسال امر عدد المسح + عدد المسح \n♡︙ مثال : عدد المسح 100', 1, 'md') end
-if text == "انطق" then  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ فقط قم بارسال امر انطق + الكلمه\n♡︙سيقوم البوت بنطق الكلمه \n♡︙ مثال : انطق هلو', 1, 'md') end
+if text == "انطق" then
+Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙ فقط قم بارسال امر انطق + الكلمه\n♡︙سيقوم البوت بنطق الكلمه \n♡︙ مثال : انطق هلو', 1, 'md') end
 if text == "يوتيوب" and  or text == "اليوتيوب" and  or text == "↫ بوت اليوتيوب ♡" and  or text == "بوت اليوتيوب" and  or text == "اريد بوت يوتيوب" and  or text == "شمرلي بوت يوتيوب" and  or text == "يوت" and  then local inline = {{{text="اضغط هنا",url="https://t.me/Qeaa_bot"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على بوت اليوتيوب*',nil,inline) return false end
 if text == "اهمس" and  or text == "↫ بوت الهمسه ♡" and  or text == "بوت الهمسه" and  or text == "همسه" and  or text == "اريد بوت الهمسه" and  or text == "دزلي بوت الهمسه" and  or text == "دزولي بوت الهمسه" and  then  Dev_ban(msg.chat_id_, msg.id_, 1, '♡︙@HMSEBOT\n♡︙@nnbbot\n♡︙@ocBot\n♡︙@hebot ', 1, 'md') end
 if text == "رابط حذف" and  or text == "رابط الحذف" and  or text == "اريد رابط الحذف" and  or text == "شمرلي رابط الحذف" and  or text == "اريد رابط حذف" and  then local inline = {{{text="اضغط هنا",url="https://t.me/LC6BOT"}}} SendInline(msg.chat_id_,'*♡︙اضغط للحصول على رابط الحذف*',nil,inline) return false end
