@@ -14615,6 +14615,7 @@ username = 'SOURCEVENOM'
 end
 local msg_id = msg.id_/2097152/0.5  
 local textt = ' 🌚❤️ رتبتك في البوت⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local Banda = 'https://t.me/c/1393263187/7'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -15199,7 +15200,7 @@ local List = {
 ⌔➺: 𝗖𝗛 - 『@X_G_33』 ᥀.
 ]],
 [[
- ᥀ - 𝓾??𝓮𝓻 ➪ #username ᥀.
+ ᥀ - 𝓾𝓼𝓮𝓻 ➪ #username ᥀.
  ᥀ - ??𝓽𝓪𝓼𝓽  ➪ #stast ᥀.
  ᥀ - 𝓲𝓭 ➪ #id ⸙ ᥀.
  ᥀ - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙ ᥀.
