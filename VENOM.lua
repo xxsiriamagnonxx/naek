@@ -1693,6 +1693,9 @@ local Sudo_Welcome = '♡︙اهلا بك مجددا عزيزي \n♡︙اليك
 local key = {
 {'↫ اوامر التسليه ♡','سوريا'},
 {'↫ رجوع ♡'},
+{
+{text = 'اخفاء الاوامر', callback_data="/hide"},
+},
 }
 send_inline_key(msg.chat_id_,Sudo_Welcome,key)
 return false
@@ -1705,6 +1708,9 @@ local key = {
 {'↫ صوره ♡','↫ متحركه ♡'},
 {'↫ مسلسل ♡','↫ فلم ♡'},
 {'↫  رجوع  ♡'},
+{
+{text = 'اخفاء الاوامر', callback_data="/hide"},
+},
 }
 send_inline_key(msg.chat_id_,Sudo_Welcome,key)
 return false
@@ -5172,7 +5178,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '⇣ 𝘴𝓲𝘳𝓲ꪖ ??ꪊ𝘳ᥴꫀ‌ ⇣', url="t.me/X_G_33"}}, 
+{{text = '⇣ 𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ ⇣', url="t.me/X_G_33"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/X_G_33&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
