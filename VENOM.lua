@@ -14626,7 +14626,7 @@ else
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-end,nil)
+end
 end
 
 if text == 'تفعيل رتبتي' and Manager(msg) then   
@@ -16092,7 +16092,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 . #username 𖣂.
 - 🇪🇬 𝒔𝒕𝒂𝒔𝒕 . #stast 𖣂.
 - 🇪🇬 𝐢?? . #id 𖣂.
-- 🇪🇬 𝒈𝒂𝒎𝒆?? . #game 𖣂.
+- 🇪?? 𝒈𝒂𝒎𝒆?? . #game 𖣂.
 - 🇪🇬 𝐦𝐬𝐠 . #msgs 𖣂.
 - 🇪🇬 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
