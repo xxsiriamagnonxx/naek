@@ -16889,46 +16889,6 @@ if Text == 'okCaptcha'..data.sender_user_id_ then
 DeleteMessage(Chat_id, {[0] = Msg_id}) 
 return https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. Chat_id .. "&user_id="..Ok_id .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 end
-if DAata and DAata:match("^(%d+):searchVid(.*)$") then
-id_from_user  = DAata:match("(%d+)")  
-local OnVid = DAata:gsub(':searchVid',''):gsub(id_from_user,'')
-msgidrp  = OnVid:match("(%d+)")
-local id_from_vid = DAata:gsub(':',''):gsub('searchVid',''):gsub(id_from_user,''):gsub(msgidrp,'')
-if tonumber(data.sender_user_id_) ~= tonumber(id_from_user) then  
-local notText = '⌯︙ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-object = https.request('https://black-source.tk/Api/InfoVid.php?url=http://www.youtube.com/watch?v='..URL.escape(id_from_vid))
-objectend = JSON.decode(object)
-infovid = "⌯︙ اختر صيغه التنزيل الان.\n"
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'Mp4', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":Mp4"},{text = 'mp3', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":mp3"},{text = 'ogg', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":ogg"}},
-{{text = '𝚂𝙸𝚁𝙸𝙰 𝚂𝚄𝚁𝙲𝙴༒',url='http://t.me/TELANDTEAM'}},
-}
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(infovid)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-InfoVid = https.request('https://black-source.tk/Api/BotYoutube.php?Id='..URL.escape(id_from_vid))
-InfoVidend = JSON.decode(InfoVid)
-if InfoVidend.Info.video == "not" then  
-https.request("https://vvvzvv.ml/Xx/searchinbot.php?V="..URL.escape(id_from_vid).."&ch=do")
-end
-end
-if DAata and DAata:match("^(%d+):DownloadVid(.*)$") then
-local notId  = DAata:match("(%d+)")  
-if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
-local notText = '⌯︙ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
-https.request("https://vvvzvv.ml/Xx/searchinbot.php?token="..token.."&chat_id="..Chat_id.."&data="..URL.escape(DAata).."&n=do")
-end
-Ok_id  = DAata:match("(%d+)")  
-if DAata == 'okCaptcha'..data.sender_user_id_ then  
-DeleteMessage(Chat_id, {[0] = Msg_id}) 
-return https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. Chat_id .. "&user_id="..Ok_id .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
-end
 if Text == '/ven3' then
 if not CoSu(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
