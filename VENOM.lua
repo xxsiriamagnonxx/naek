@@ -3925,7 +3925,38 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/hjatwklas/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-
+if text ==('رفع رتبه') and ChCheck(msg) then
+function prom_reply(extra, result, success)
+tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,dp) 
+if dp.first_name_ == false then
+Dev_Abs(msg.chat_id_, msg.id_, 1, "⦿︙الحساب محذوف", 1, "md")
+return false  
+end
+local Text = '⦿︙قم باستعمال الازرار لرفع العضو ↫ ⤈\n⦿︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'Source_Queen')..')'
+if Sudo(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_..":SetSudoBot:"..result.sender_user_id_}},{{text="رفع مطور ثانوي",callback_data=msg.sender_user_id_..":SetSecondSudo:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif SecondSudo(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_..":SetSudoBot:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif SudoBot(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif AbsConstructor(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif BasicConstructor(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفعمنظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif Constructor(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif Manager(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif Admin(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+end
+SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
+end,nil)
+end 
+if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
+getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
+end 
+end
 if text == 'الابراج' then
 local Text = [[
 • أختر برجك عزيزي •📮،⍆
@@ -16841,24 +16872,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'رفع رتبه' then
-local Text = [[
-اخـتر من الازارار التي في الاسفل لرفع الرتبه 
-▒━᥀⟞⟦ ℻ 𝘴𝓲𝘳𝓲ꪖま ℻ ⟧⟝᥀━▒
- 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'رفع مطور', callback_data="/motawer"},{text = 'رفع مطور ثانوي', callback_data="/motawers"},
-},
-{
-{text = '⇣ 𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ ⇣', url="t.me/X_G_33"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/hjatwklas/6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
+
 if text == "صلاحياته" and tonumber(msg.reply_to_message_id_) > 0 then    
 if tonumber(msg.reply_to_message_id_) ~= 0 then 
 function prom_reply(extra, result, success) 
@@ -16940,30 +16954,6 @@ Ok_id  = Text:match("(%d+)")
 if Text == 'okCaptcha'..data.sender_user_id_ then  
 DeleteMessage(Chat_id, {[0] = Msg_id}) 
 return https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. Chat_id .. "&user_id="..Ok_id .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
-end
-if text and text:match("^/motawer (%d+)$") and Devban(msg) then
-local userid = text:match("^/motawer (%d+)$")
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = bot_data:get(ban_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
-end
-return false
-end
-bot_data:sadd(ban_id..'Sudo:User', userid)
-tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
-if data.first_name_ then
-usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ᥀ تم ترقيته مطور'
-send(msg.chat_id_, msg.id_, usertext..status)
-else
-usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
-status  = '\n ᥀ تم ترقيته مطور'
-send(msg.chat_id_, msg.id_, usertext..status)
-end;end,nil)
-return false 
 end
 if Text == '/ven3' then
 if not CoSu(data) then
@@ -18813,7 +18803,7 @@ end
 
 if Text == '/HHH' then
 local Teext =[[
-• 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙸𝚁𝙸𝙰𖡌 ⇣
+• 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙸𝚁??𝙰𖡌 ⇣
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -20067,7 +20057,7 @@ bot_data:set(ban_id.."lock:tagservr"..msg.chat_id_,'del')
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '᥀𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
+{text = '᥀𝙱𝙰??𝙺↵', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
