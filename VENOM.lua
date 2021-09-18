@@ -3787,7 +3787,108 @@ https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. 
 return false
 end
 ----------------------------------------------------------------------------
-if text == 'رفع' then
+if text ==('ترقيه') or text ==('رفع') then
+function sudo_ght(extra, result, success)
+local Text = "ارفع الرتبه المراد بها عبر الازرار"
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'مطور ثانوي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/SecondSudo"},
+}, 
+{
+{text = 'مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Sudo"},
+},
+{
+{text = 'منشئ اساسي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/BasicConstructor"},{text = 'منشئ', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Constructor"},
+},
+{
+{text = 'مدير', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Manager"},{text = 'ادمن', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Admin"},
+},
+{
+{text = 'مميز', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/vip"},{text = 'مميز عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/VipAll"},
+}, 
+{
+{text = 'ادمن عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/AdminAll"},{text = 'مدير عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/ManagerAll"},
+},
+{
+{text = 'مالك', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/AbsConstructor"},
+},
+{
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
+else
+getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),sudo_ght)
+end 
+end
+if text and (text:match('^ترقيه @(.*)') or text:match('^رفع @(.*)')) then
+local username = text:match('^ترقيه @(.*)') or text:match('^رفع @(.*)')
+function drrreply(extra,result,success)
+if result.id_ then
+local Text = "ارفع الرتبه المراد بها  عبر الازرار"
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'مطور ثانوي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/SecondSudo"},
+}, 
+{
+{text = 'مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Sudo"},
+},
+{
+{text = 'منشئ اساسي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/BasicConstructor"},{text = 'منشئ', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Constructor"},
+},
+{
+{text = 'مدير', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Manager"},{text = 'ادمن', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Admin"},
+},
+{
+{text = 'مميز', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/vip"},{text = 'مميز عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/VipAll"},
+},
+{
+{text = 'ادمن عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/AdminAll"},{text = 'مدير عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/ManagerAll"},
+},
+{
+{text = 'مالك', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/AbsConstructor"},
+},
+{
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+ end
+resolve_username(username,drrreply)
+end
+if text and (text:match('^ترقيه (%d+)') or text:match('^رفع (%d+)')) then
+local user = text:match('ترقيه (%d+)') or text:match('رفع (%d+)')
+local Text = "اضغط علي الرتبه المراد الرفع بها"
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'مطور ثانوي', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/SecondSudo"},
+}, 
+{
+{text = 'مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/Sudo"},
+},
+{
+{text = 'منشئ اساسي', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/BasicConstructor"},{text = 'منشئ', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/Constructor"},
+},
+{
+{text = 'مدير', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/Manager"},{text = 'ادمن', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/Admin"},
+},
+{
+{text = 'مميز', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/vip"},{text = 'مميز عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/VipAll"},
+},
+{
+{text = 'ادمن عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/AdminAll"},{text = 'مدير عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/ManagerAll"},
+},
+}
+{text = 'مالك', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/AbsConstructor"},
+},
+{
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+----------------------------------------------------------------------------
+if text == 'الالعاب' then
 local Text = [[
  اهلا بك في قسم الالعاب ..↑↓
  اختر العبه الذي تريدها .↑↓
@@ -3798,7 +3899,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'رفع مطور', callback_data="/@siria"},{text = '◗الاضافات◖', callback_data="/change-photo"},
+{text = '◗العاب السورس◖', callback_data="/mute-name"},{text = '◗الاضافات◖', callback_data="/change-photo"},
 },
 {
 {text = '◗ متطوره◖', callback_data="/DRG"},
@@ -6141,7 +6242,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↝  '..username..' \n¦• 𝙼𝚂𝙶𝚂↝ '..Msguser..' \n¦• 𝚁𝙰𝙽𝙺↝ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n¦• 𝙸𝙳↝  '..msg.sender_user_id_..' \n¦• 𝒄𝒉↝ @X_G_33  \n')
+send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↝  '..username..' \n¦• 𝙼𝚂𝙶𝚂↝ '..Msguser..' \n¦• 𝚁𝙰𝙽𝙺↝ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n¦• 𝙸𝙳↝  '..msg.sender_user_id_..' \n¦• ??𝒉↝ @X_G_33  \n')
 end
 end
 
@@ -7513,7 +7614,7 @@ send(msg.chat_id_,msg.id_," ᥀ تم مسح الملفات")
 return false
 end
 
-if text == ("/@siria") and msg.reply_to_message_id_ and Devban(msg) then
+if text == ("رفع مطور") and msg.reply_to_message_id_ and Devban(msg) then
 function start_function(extra, result, success)
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -7563,8 +7664,8 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false 
 end
-if text and text:match("^siria (%d+)$") and Devban(msg) then
-local userid = text:match("^siria (%d+)$")
+if text and text:match("^رفع مطور (%d+)$") and Devban(msg) then
+local userid = text:match("^رفع مطور (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
