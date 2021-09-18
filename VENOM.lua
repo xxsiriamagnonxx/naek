@@ -3824,24 +3824,6 @@ keyboard.inline_keyboard = {
 {text = 'مطور ثانوي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/SecondSudo"},
 }, 
 {
-{text = 'مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Sudo"},
-},
-{
-{text = 'منشئ اساسي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/BasicConstructor"},{text = 'منشئ', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Constructor"},
-},
-{
-{text = 'مدير', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Manager"},{text = 'ادمن', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Admin"},
-},
-{
-{text = 'مميز', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/vip"},{text = 'مميز عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/VipAll"},
-}, 
-{
-{text = 'ادمن عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/AdminAll"},{text = 'مدير عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/ManagerAll"},
-},
-{
-{text = 'مالك', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/AbsConstructor"},
-},
-{
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
@@ -16087,7 +16069,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
 [[
-.𖣂 𝙪??𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
+.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
 .𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  🖤 ↴
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
