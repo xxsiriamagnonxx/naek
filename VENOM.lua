@@ -3929,7 +3929,7 @@ if text ==('رفع رتبه')and tonumber(msg.reply_to_message_id_) ~= 0 and Sud
 function prom_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,dp) 
 if dp.first_name_ == false then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⦿︙الحساب محذوف", 1, "md")
+send(msg.chat_id_, msg.id_, 1, "⦿︙الحساب محذوف", 1, "md")
 return false  
 end
 local Text = '⦿︙قم باستعمال الازرار لرفع العضو ↫ ⤈\n⦿︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'Source_Queen')..')'
@@ -6172,7 +6172,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↝  '..username..' \n¦• 𝙼𝚂??𝚂↝ '..Msguser..' \n¦• 𝚁𝙰𝙽𝙺↝ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n¦• 𝙸𝙳↝  '..msg.sender_user_id_..' \n¦• 𝒄𝒉↝ @X_G_33  \n')
+send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↝  '..username..' \n¦• 𝙼𝚂𝙶𝚂↝ '..Msguser..' \n¦• 𝚁𝙰𝙽𝙺↝ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n¦• 𝙸𝙳↝  '..msg.sender_user_id_..' \n¦• 𝒄𝒉↝ @X_G_33  \n')
 end
 end
 
@@ -14959,7 +14959,7 @@ local List = {
 🇯🇵 - 𝄬 msgs . #msgs  ??
 ]],
 [[
-𓄼🇪🇭 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
+??🇪🇭 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
 𓄼🇪🇭 𝑺𝒕𝒂𝒔𝒕 : #stast    ☥
 𓄼🇪🇭 𝒊𝒅 : #id ‌‌‏⚚
 𓄼🇪🇭 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
@@ -17241,7 +17241,7 @@ local Teext =[[
 ᥀ my husDRGd
 ᥀ Crown for couples
 ᥀ Survey of couples
-○━━━━??𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
+○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
 ᥀ My wife
 ᥀ Crown for the wives
 ᥀ Wipe waves
@@ -18803,7 +18803,7 @@ end
 
 if Text == '/HHH' then
 local Teext =[[
-• 𝚆??𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙸𝚁𝙸𝙰𖡌 ⇣
+• 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙸𝚁𝙸𝙰𖡌 ⇣
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
