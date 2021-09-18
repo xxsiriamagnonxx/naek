@@ -3821,27 +3821,28 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'مطور ثانوي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/SecondSudo"},
+{text = 'مطور ثانوي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/SecondSudo"},
 }, 
 {
-{text = 'مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Sudo"},
+{text = 'مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Sudo"},
 },
 {
-{text = 'منشئ اساسي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/BasicConstructor"},{text = 'منشئ', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Constructor"},
+{text = 'منشئ اساسي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/BasicConstructor"},{text = 'منشئ', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Constructor"},
 },
 {
-{text = 'مدير', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Manager"},{text = 'ادمن', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Admin"},
+{text = 'مدير', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Manager"},{text = 'ادمن', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Admin"},
 },
 {
-{text = 'مميز', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/vip"},{text = 'مميز عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/VipAll"},
+{text = 'مميز', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/vip"},{text = 'مميز عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/VipAll"},
 }, 
 {
-{text = 'ادمن عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/AdminAll"},{text = 'مدير عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/ManagerAll"},
+{text = 'ادمن عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/AdminAll"},{text = 'مدير عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/ManagerAll"},
 },
 {
-{text = 'مالك', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/AbsConstructor"},
+{text = 'مالك', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/AbsConstructor"},
 },
 {
+local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'اصنع يوزر' or text == 'اصنع' then
@@ -9924,7 +9925,7 @@ bot_data:sadd(result.sender_user_id_..'YYYBD-zoaag2', msg.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,ay) 
 usertext = '\n ᥀ العضــو  ⋙ ['..ay.first_name_..'](tg://user?id='..msg.sender_user_id_..')'
-..'\n᥀ مع ['..data.first_name_..'](tg://user?id='..result.sender_user_id_..')'
+..'\n᥀ مع ['..data.first_name_..'](tg://user?id='..result.id_..')'
 local statuss  = '\n ᥀ تم زواجكم بنجاح \n'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
@@ -11616,7 +11617,7 @@ usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.u
 status  = '\n ᥀ تم كتم لمدة ~ { '..TextEnd[2]..' '..TextEnd[3]..'}'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
-https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.sender_user_id_..'&until_date='..tonumber(msg.date_+Time))
+https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.id_..'&until_date='..tonumber(msg.date_+Time))
 end
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -11869,7 +11870,7 @@ usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.u
 status  = '\n ᥀ تم تقيده لمدة ~ { '..TextEnd[2]..' '..TextEnd[3]..'}'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
-https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.sender_user_id_..'&until_date='..tonumber(msg.date_+Time))
+https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.id_..'&until_date='..tonumber(msg.date_+Time))
 end
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -12165,12 +12166,12 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 if text == ("رفع مشرف") and msg.reply_to_message_id_ ~= 0 and Constructor(msg) then
 function start_function(extra, result, success)
-https.request("https://api.telegram.org/bot" .. token .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_invite_users=True")
+https.request("https://api.telegram.org/bot" .. token .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_invite_users=True")
 local Text = "᥀ تم ترقيته مشرف"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'تعديل الصلاحيات', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/setiinginfo"}
+{text = 'تعديل الصلاحيات', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/setiinginfo"}
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -12212,9 +12213,9 @@ return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ᥀  الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ᥀  الايدي  ⋙ `'..result.sender_user_id_..'`\n ᥀  تم تنزيله ادمن من الجروب'
+status  = '\n ᥀  الايدي  ⋙ `'..result.id_..'`\n ᥀  تم تنزيله ادمن من الجروب'
 send(msg.chat_id_, msg.id_, usertext..status)
-https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
+https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -14273,10 +14274,10 @@ return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..') '
-status  = '\n ᥀ الايدي  ⋙ '..result.sender_user_id_..'\n ᥀تم ضافه {'..timsh..'} كلقب له'
+status  = '\n ᥀ الايدي  ⋙ '..result.id_..'\n ᥀تم ضافه {'..timsh..'} كلقب له'
 send(msg.chat_id_, msg.id_, usertext..status)
-https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=True&can_restrict_members=false&can_pin_messages=True&can_promote_members=false")
-https.request("https://api.telegram.org/bot"..token.."/setChatAdministratorCustomTitle?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&custom_title="..timsh)
+https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=True&can_restrict_members=false&can_pin_messages=True&can_promote_members=false")
+https.request("https://api.telegram.org/bot"..token.."/setChatAdministratorCustomTitle?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&custom_title="..timsh)
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -14291,9 +14292,9 @@ return false
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ᥀  الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ᥀  الايدي  ⋙ `'..result.sender_user_id_..'`\n ᥀  تم مسح لقبه من الجروب'
+status  = '\n ᥀  الايدي  ⋙ `'..result.id_..'`\n ᥀  تم مسح لقبه من الجروب'
 send(msg.chat_id_, msg.id_, usertext..status)
-https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
+https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -16086,7 +16087,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
 [[
-.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
+.𖣂 𝙪??𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
 .𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  🖤 ↴
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
@@ -21821,7 +21822,7 @@ end
 if #list == 0 then
 t = " ᥀ لا يوجد ادمن"
 end
-send(msg.chat_id_,0,''..t..'\n○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○\n ᥀ تم التعديل على الميديا\n ᥀ الشخص الي قام بالتعديل\n ᥀ ايدي الشخص ◂ '..result.sender_user_id_..'\n ᥀ معرف الشخص ⋙{ '..users..' }') 
+send(msg.chat_id_,0,''..t..'\n○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○\n ᥀ تم التعديل على الميديا\n ᥀ الشخص الي قام بالتعديل\n ᥀ ايدي الشخص ◂ '..result.id_..'\n ᥀ معرف الشخص ⋙{ '..users..' }') 
 end,nil)
 DeleteMessage(msg.chat_id_,{[0] = msg.message_id_}) 
 end
