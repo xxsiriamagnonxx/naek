@@ -3787,7 +3787,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. 
 return false
 end
 ----------------------------------------------------------------------------
-if text == 'الالعاب' then
+if text == 'رفع' then
 local Text = [[
  اهلا بك في قسم الالعاب ..↑↓
  اختر العبه الذي تريدها .↑↓
@@ -3798,7 +3798,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '◗العاب السورس◖', callback_data="/mute-name"},{text = '◗الاضافات◖', callback_data="/change-photo"},
+{text = 'رفع مطور', callback_data="@siria"},{text = '◗الاضافات◖', callback_data="/change-photo"},
 },
 {
 {text = '◗ متطوره◖', callback_data="/DRG"},
@@ -7513,7 +7513,7 @@ send(msg.chat_id_,msg.id_," ᥀ تم مسح الملفات")
 return false
 end
 
-if text == ("رفع مطور") and msg.reply_to_message_id_ and Devban(msg) then
+if text == ("@siria") and msg.reply_to_message_id_ and Devban(msg) then
 function start_function(extra, result, success)
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -7534,7 +7534,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false 
 end
-if text and text:match("^رفع مطور @(.*)$") and Devban(msg) then
+if text and text:match("^siria @(.*)$") and Devban(msg) then
 local username = text:match("^رفع مطور @(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -7563,8 +7563,8 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false 
 end
-if text and text:match("^رفع مطور (%d+)$") and Devban(msg) then
-local userid = text:match("^رفع مطور (%d+)$")
+if text and text:match("^siria (%d+)$") and Devban(msg) then
+local userid = text:match("^siria (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
@@ -16108,7 +16108,7 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
-👳🏼‍♂ - 𝄬 𝗖𝗛 - 『@X_G_33』 ᥀
+👳🏼‍♂ - ?? 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
 [[
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
