@@ -3954,7 +3954,7 @@ SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
 end,nil)
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
-getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
+sendMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end 
 end
 if text == 'الابراج' then
@@ -14956,7 +14956,7 @@ local List = {
 🇯🇵 - 𝄬 stast . #stast  𓃠
 🇯🇵 - 𝄬 id . #id 𓃠
 🇯🇵 - 𝄬 gmas . #gmas 𓃠
-🇯🇵 - 𝄬 msgs . #msgs  𓃠
+🇯🇵 - 𝄬 msgs . #msgs  ??
 ]],
 [[
 𓄼🇪🇭 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
