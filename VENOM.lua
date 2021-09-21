@@ -3781,6 +3781,7 @@ keyboard.inline_keyboard = {
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
 if text == 'تحكم' and msg.reply_to_message_id_ and Mod(msg) then
@@ -15319,7 +15320,7 @@ local List = {
 ]],
 [[
 ➫✿: S #stast ??➟♡.
-➫✿: U?? #username 𓍯➟♡.
+➫✿: U𓂅 #username 𓍯➟♡.
 ➫✿: M𓂅 #msgs 𓍯➟♡.
 ➫✿:  I  #id ➟♡.
 ➫✿: 𝗖𝗛 - 『@X_G_33』 ᥀.
@@ -15764,7 +15765,7 @@ Msᴀɢ ~ #msgs
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
-- 𓏬 𝐒𝐭?? : #stast 𓂅 .
+- 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
 - 𓏬 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
