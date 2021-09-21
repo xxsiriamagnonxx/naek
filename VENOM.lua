@@ -17057,6 +17057,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false 
 end
+
 if Text and Text:match("^/t7km1 (.*)$") then
 local userid = Text:match("^/t7km1 (.*)$")
 if not Mod(data) then
