@@ -3755,37 +3755,21 @@ user_id_ = user_id
 }, cb, nil)
 end
 ---------------------- الاوامر الجديدة
-if text == 'رفع رتبه' then
+if text == ("رفع رتبه") and msg.reply_to_message_id_ ~= 0 and Constructor(msg) then
 function start_function(extra, result, success)
-tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-if not Mod(msg) then
-send(msg.chat_id_, msg.id_,' ᥀ هذا الامر خدد ليس لك\n  اكتب 『اوامر الاعضاء』لعرض اوامر الاعضاء')
-return false
-end
-local Text =[[
-᥀ اهلآ بك عـزيزي في اوامر الرفع والتنزيل↓
-اختر الامر الذي تريدها .↑↓
-ده من الازرار بلاسفل . ↓
-᥀○━━━━ṨὋȖȒƇἝ ṨἿȒἿᾋ ✟━━━━○᥀
-
-]]
+https.request("https://api.telegram.org/bot" .. token .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_invite_users=True")
+local Text = "᥀ اختر الاوامر من الاسفل "
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'رفع مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/rwtpa1"},
-},
-{
-{text = 'رفع مطور ثانوي◖', callback_data="/rwtpa2"},
-},
-{
-{text = 'رفع منشئ', callback_data="/rwtpa3"},{text = 'تنزيل منشئ', callback_data="/rwtpa33"},
+{text = 'رفع مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/rwtpa1"}
 },
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
-end,nil)
 end
 if text == 'تحكم' and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
@@ -8531,7 +8515,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمدراء") or text == ("صيح المدراء") then
 local list = bot_data:smembers(ban_id..'Manager'..msg.chat_id_)
-t = "\n ᥀ وينكم تعالو يريدوكم بالجروب \n○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○\n"
+t = "\n ᥀ وينكم تعالو يريدوكم بالجروب \n○━━━━??𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -16204,7 +16188,7 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
 👳🏼‍♂ - 𝄬 stast . #stast . 🇪🇬
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
-👳🏼‍♂ - 𝄬 auto . #auto . 🇪??
+👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
 👳🏼‍♂ - 𝄬 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
