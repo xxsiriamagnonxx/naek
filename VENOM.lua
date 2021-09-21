@@ -3790,6 +3790,35 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
+if text == 'رفع رتبه' and msg.reply_to_message_id_ and Mod(msg) then
+if AddChannel(msg.sender_user_id_) == false then
+local X_G_33 = bot_data:get(ban_id..'text:ch:user')
+if X_G_33 then
+send(msg.chat_id_, msg.id_,'['..X_G_33..']')
+else
+send(msg.chat_id_, msg.id_,'☭لا تستطيع استخدام البوت \n ☭يرجى الاشتراك بالقناه اولا \n ☭اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+end
+return false
+end
+function start_function(extra, result, success)
+if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) == true then
+local Text = 'عذرا هذا '..Rutba(result.sender_user_id_,msg.chat_id_)..'\nلا يمكنني التحكم بة'
+send(msg.chat_id_, msg.id_, Text)
+return false
+end
+local Text = 'مرحبـآ عزيزي  يمكنك التحكم بالعضو عن طريق الازرار '..Rutba(msg.sender_user_id_,msg.chat_id_)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'رفع مطور', callback_data="/rwtpa1 "..result.sender_user_id_},{text = 'تقيد', callback_data="/t7km6 "..result.sender_user_id_},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
+return false
+end
 if text == 'الاوامر' then
 if not Mod(msg) then
 send(msg.chat_id_, msg.id_,' ᥀ هذا الامر خدد ليس لك\n  اكتب 『اوامر الاعضاء』لعرض اوامر الاعضاء')
@@ -7548,7 +7577,7 @@ send(msg.chat_id_,msg.id_," ᥀ تم مسح الملفات")
 return false
 end
 
-if text == ("رفع رتبه") and msg.reply_to_message_id_ ~= 0 and Constructor(msg) then
+if text == ("هرفع رتبه") and msg.reply_to_message_id_ ~= 0 and Constructor(msg) then
 function start_function(extra, result, success)
 https.request("https://api.telegram.org/bot" .. token .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_invite_users=True")
 local Text = "᥀ اختر الاوامر من الاسفل "
@@ -12932,7 +12961,7 @@ send(msg.chat_id_, msg.reply_to_message_id_, 'ريب 4')
 send(msg.chat_id_, msg.reply_to_message_id_, 'ريب 5')
 send(msg.chat_id_, msg.reply_to_message_id_, 'مات 😂')
 send(msg.chat_id_, msg.reply_to_message_id_, 'بفتث 😂')
-send(msg.chat_id_, msg.id_, 'امسح بقي عشان ميحصلش حاجه للروم من الشتايم ??')
+send(msg.chat_id_, msg.id_, 'امسح بقي عشان ميحصلش حاجه للروم من الشتايم 😚')
 return false 
 end,nil)
 end
@@ -16202,7 +16231,7 @@ Msᴀɢ ~ #msgs
 𝟓 𝟔 𖡻 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
 [[
-► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username ??  ꙰
+► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
@@ -20380,7 +20409,7 @@ bot_data:set(ban_id.."lock_edit_med"..msg.chat_id_,'del')
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '᥀??𝙰𝙲𝙺↵', callback_data="/help8"},
+{text = '᥀𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
