@@ -7555,7 +7555,7 @@ local Text = "᥀ اختر الاوامر من الاسفل "
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'رفع مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/rwtpa1"}
+{text = 'رفع مطور', callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_}
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -7615,8 +7615,8 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false 
 end
-if text and text:match("^رفع مطور (%d+)$") and Devban(msg) then
-local userid = text:match("^رفع مطور (%d+)$")
+if text and text:match("^:SetMem (%d+)$") and Devban(msg) then
+local userid = text:match("^:SetMem (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local X_G_33 = bot_data:get(ban_id..'text:ch:user')
 if X_G_33 then
@@ -15756,7 +15756,7 @@ Msᴀɢ ~ #msgs
 - 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
 [[
-- ??𝑠𝑒𝑟??𝑎𝑚𝑒 ⟿ #username
+- ??𝑠𝑒𝑟𝑛𝑎𝑚𝑒 ⟿ #username
 - 𝑚𝑠𝑔𝑠 ⟿ #msgs
 - 𝑖𝑑 ⟿ #id
 - 𝑒𝑑𝑖𝑡 ⟿ #edit
@@ -16202,7 +16202,7 @@ Msᴀɢ ~ #msgs
 𝟓 𝟔 𖡻 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
 [[
-► 𝗨𝗦𝗘𝗥𝗡??𝗠𝗘 #username 𓃚  ꙰
+► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
