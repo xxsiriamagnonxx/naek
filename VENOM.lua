@@ -3770,7 +3770,7 @@ local Text =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'رفع مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/rwtpa1"},
+{text = 'رفع مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/rwtpa1"},
 },
 {
 {text = 'رفع مطور ثانوي◖', callback_data="/rwtpa2"},
@@ -15319,7 +15319,7 @@ local List = {
 ]],
 [[
 ➫✿: S #stast ??➟♡.
-➫✿: U𓂅 #username 𓍯➟♡.
+➫✿: U?? #username 𓍯➟♡.
 ➫✿: M𓂅 #msgs 𓍯➟♡.
 ➫✿:  I  #id ➟♡.
 ➫✿: 𝗖𝗛 - 『@X_G_33』 ᥀.
@@ -15764,7 +15764,7 @@ Msᴀɢ ~ #msgs
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
-- 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
+- 𓏬 𝐒𝐭?? : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
 - 𓏬 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
@@ -18423,7 +18423,7 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 if Text == '/help38' then
-local Text = 'لتجربه العلبه عليك ان تكتب السمايلات في الشات??'
+local Text = 'لتجربه العلبه عليك ان تكتب السمايلات في الشات🔰'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(Text).."&show_alert=true")
 return false
 end
