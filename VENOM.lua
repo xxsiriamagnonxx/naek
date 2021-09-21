@@ -17077,27 +17077,38 @@ send(msg.chat_id_, msg.id_,'᥀ لا يوجد رابط ارسل ضع رابط')
 end 
 end,nil) 
 end
-if Text and Text:match("^/rwtpa1 (.*)$") then
+if text and text:match("^rwtpa1 (%d+)$") and Devban(msg) then
+local userid = text:match("^rwtpa1 (%d+)$")
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = bot_data:get(ban_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+end
+return false
+end
+bot_data:sadd(ban_id..'Sudo:User', userid)
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
+tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
+if data.first_name_ then
+usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+status  = '\n ᥀ تم ترقيته مطور'
+send(msg.chat_id_, msg.id_, usertext..status)
+else
+usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
+status  = '\n ᥀ تم ترقيته مطور'
+send(msg.chat_id_, msg.id_, usertext..status)
+end;end,nil)
+return false 
+end
+if Text and Text:match("^/t7km1 (.*)$") then
 local userid = Text:match("^/t7km1 (.*)$")
 if not Mod(data) then
 local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
-end
-local text = 'تم رفع العضو مطور'
-bot_data:srem(ban_id..'Sudo:User'..Chat_id, userid)
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
-end
-if Text and Text:match("^/t7km2 (.*)$") then
-local userid = Text:match("^/t7km2 (.*)$")
-if not Mod(data) then
-local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-local text = 'تم تنزيله من المطور'
-bot_data:sadd(ban_id..'Sudo:User'..Chat_id, userid)
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
 local text = 'تم الغاء كتم العضو'
 bot_data:srem(ban_id..'Muted:User'..Chat_id, userid)
