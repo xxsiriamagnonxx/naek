@@ -17064,8 +17064,8 @@ send(msg.chat_id_, msg.id_,'᥀ لا يوجد رابط ارسل ضع رابط')
 end 
 end,nil) 
 end
-if text and text:match("^/SetMem (%d+)$") and Devban(msg) then
-local userid = text:match("^/SetMem (%d+)$")
+if text and text:match("^/rwtpa1 (%d+)$") and Devban(msg) then
+local userid = text:match("^/rwtpa1 (%d+)$")
 if not Mod(data) then
 local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
