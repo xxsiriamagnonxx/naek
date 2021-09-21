@@ -17046,11 +17046,11 @@ end
 if data.first_name_ then
 local text = 'تم ترقيته مطور'
 status  = '\n ᥀ تم ترقيته مطور'
-send(msg.chat_id_, msg.id_, usertext..status)
+send(msg.chat_id_, msg.id_," ᥀ تم رفعه مطور")
 else
 local text = 'تم ترقيته مطور'
 status  = '\n ᥀ تم ترقيته مطور'
-send(msg.chat_id_, msg.id_, usertext..status)
+send(msg.chat_id_, msg.id_," ᥀ تم رفعه مطور")
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false 
 end
