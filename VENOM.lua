@@ -17077,8 +17077,8 @@ send(msg.chat_id_, msg.id_,'᥀ لا يوجد رابط ارسل ضع رابط')
 end 
 end,nil) 
 end
-if text and text:match("^rwtpa1 (%d+)$") and Devban(msg) then
-local userid = text:match("^rwtpa1 (%d+)$")
+if Text and Text:match("^rwtpa1 (.*)$") then
+local userid = Text:match("^/rwtpa1 (.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
@@ -17414,7 +17414,7 @@ local Teext =[[
 ○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
 ᥀ Crown for Paradise
 ᥀ Storage survey
-○━━━━??𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
+○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
 
 ]]
 keyboard = {} 
