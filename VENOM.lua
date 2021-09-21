@@ -17064,7 +17064,7 @@ send(msg.chat_id_, msg.id_,'᥀ لا يوجد رابط ارسل ضع رابط')
 end 
 end,nil) 
 end
-if text and text:match("^/rwtpa1 (%d+)$") and Devban(msg) then
+if text and text:match("^/rwtpa1 (%d+)$") then
 local userid = text:match("^/rwtpa1 (%d+)$")
 if not Mod(data) then
 local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
