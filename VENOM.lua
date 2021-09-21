@@ -3756,6 +3756,7 @@ user_id_ = user_id
 end
 ---------------------- الاوامر الجديدة
 if text == 'رفع رتبه' then
+function start_function(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 if not Mod(msg) then
 send(msg.chat_id_, msg.id_,' ᥀ هذا الامر خدد ليس لك\n  اكتب 『اوامر الاعضاء』لعرض اوامر الاعضاء')
@@ -3771,7 +3772,7 @@ local Text =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'رفع مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/rwtpa1"},
+{text = 'رفع مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/rwtpa1"},
 },
 {
 {text = 'رفع مطور ثانوي◖', callback_data="/rwtpa2"},
@@ -15757,7 +15758,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 - 𝚄𝚂??𝚁 ⟿ #username 💘.
+🇪🇬 - 𝚄𝚂𝙴𝚁 ⟿ #username 💘.
 🇪🇬 - 𝙼𝚂𝙶𝚂 ⟿  #msgs 💘.
 🇪🇬 - 𝙶𝙼𝙰𝚂 ⟿ #stast 💘.
 🇪🇬 - 𝙸𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
@@ -16203,7 +16204,7 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
 👳🏼‍♂ - 𝄬 stast . #stast . 🇪🇬
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
-👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
+👳🏼‍♂ - 𝄬 auto . #auto . 🇪??
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
 👳🏼‍♂ - 𝄬 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
