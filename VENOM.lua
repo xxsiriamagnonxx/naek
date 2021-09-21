@@ -7550,7 +7550,7 @@ end
 
 if text == ("رفع رتبه") and msg.reply_to_message_id_ ~= 0 and Constructor(msg) then
 function start_function(extra, result, success)
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+https.request("https://api.telegram.org/bot" .. token .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_invite_users=True")
 local Text = "᥀ اختر الاوامر من الاسفل "
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15124,7 +15124,7 @@ local List = {
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
-- 𓏬 𝐈𝐃 : #id 𓂅 .
+- 𓏬 𝐈?? : #id 𓂅 .
 - 𓏬 𝗖𝗛 - 『@X_G_33』 ᥀.
 ]],
 [[
