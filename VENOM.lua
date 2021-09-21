@@ -17037,10 +17037,17 @@ end,nil)
 end
 if text and text:match('amr@(%d+)/user@(%d+)/rwtpa1') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/rwtpa1$")}
-if tonumber(users[1]) == tonumber(data.sender_user_id_) then
-sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
+function start_function(extra, result, success)
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = bot_data:get(ban_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
-bot_data:sadd(ban_id..'Sudo:User', userid)
+return false
+end
+bot_data:sadd(ban_id..'Sudo:User', result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
 status  = '\n ᥀ تم ترقيته مطور'
