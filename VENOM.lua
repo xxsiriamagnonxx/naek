@@ -3755,6 +3755,34 @@ user_id_ = user_id
 }, cb, nil)
 end
 ---------------------- الاوامر الجديدة
+if text == 'رفع رتبه' then
+if not Mod(msg) then
+send(msg.chat_id_, msg.id_,' ᥀ هذا الامر خدد ليس لك\n  اكتب 『اوامر الاعضاء』لعرض اوامر الاعضاء')
+return false
+end
+local Text =[[
+᥀ اهلآ بك عـزيزي في اوامر الرفع والتنزيل↓
+اختر الامر الذي تريدها .↑↓
+ده من الازرار بلاسفل . ↓
+᥀○━━━━ṨὋȖȒƇἝ ṨἿȒἿᾋ ✟━━━━○᥀
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '◗رفع مطور◖', callback_data="/rwtpa1"},{text = '◗تنزيل مطور◖', callback_data="/rwtpa11"},
+},
+{
+{text = 'رفع مطور ثانوي◖', callback_data="/rwtpa2"},
+},
+{
+{text = 'رفع منشئ', callback_data="/rwtpa3"},{text = 'تنزيل منشئ', callback_data="/rwtpa33"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
 if text == 'تحكم' and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local X_G_33 = bot_data:get(ban_id..'text:ch:user')
@@ -17048,6 +17076,28 @@ else
 send(msg.chat_id_, msg.id_,'᥀ لا يوجد رابط ارسل ضع رابط') 
 end 
 end,nil) 
+end
+if Text and Text:match("^/rwtpa1 (.*)$") then
+local userid = Text:match("^/t7km1 (.*)$")
+if not Mod(data) then
+local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local text = 'تم رفع العضو مطور'
+bot_data:sadd(ban_id..'Sudo:User', userid)
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
+end
+if Text and Text:match("^/t7km2 (.*)$") then
+local userid = Text:match("^/t7km2 (.*)$")
+if not Mod(data) then
+local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local text = 'تم تنزيله من المطور'
+bot_data:srem(ban_id..'Sudo:User', userid)
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
 if Text and Text:match("^/t7km1 (.*)$") then
 local userid = Text:match("^/t7km1 (.*)$")
