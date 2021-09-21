@@ -17097,7 +17097,7 @@ usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.u
 status  = '\n ᥀ تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
-usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
+usertext = '\n ᥀ الـعـضو   ⋙ '..result.title_..''
 status  = '\n ᥀ تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
