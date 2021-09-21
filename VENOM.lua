@@ -3755,6 +3755,41 @@ user_id_ = user_id
 }, cb, nil)
 end
 ---------------------- الاوامر الجديدة
+if text == 'تحكم' and msg.reply_to_message_id_ and Mod(msg) then
+if AddChannel(msg.sender_user_id_) == false then
+local X_G_33 = database:get(bot_id..'text:ch:user')
+if X_G_33 then
+send(msg.chat_id_, msg.id_,'['..X_G_33..']')
+else
+send(msg.chat_id_, msg.id_,'☭لا تستطيع استخدام البوت \n ☭يرجى الاشتراك بالقناه اولا \n ☭اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
+end
+function start_function(extra, result, success)
+if Can_or_NotCan(result.sender_user_id_, msg.chat_id_) == true then
+local Text = 'عذرا هذا '..Rutba(result.sender_user_id_,msg.chat_id_)..'\nلا يمكنني التحكم بة'
+send(msg.chat_id_, msg.id_, Text)
+return false
+end
+local Text = 'مرحبـآ عزيزي  يمكنك التحكم بالعضو عن طريق الازرار '..Rutba(msg.sender_user_id_,msg.chat_id_)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الغاء كتم', callback_data="/t7km1 "..result.sender_user_id_},{text = 'كتم', callback_data="/t7km2 "..result.sender_user_id_},
+},
+{
+{text = 'الغاء حظر', callback_data="/t7km3 "..result.sender_user_id_},{text = 'حظر', callback_data="/t7km4 "..result.sender_user_id_},
+},
+{
+{text = 'الغاء تقيد', callback_data="/t7km5 "..result.sender_user_id_},{text = 'تقيد', callback_data="/t7km6 "..result.sender_user_id_},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
+return false
+end
 if text == 'الاوامر' then
 if not Mod(msg) then
 send(msg.chat_id_, msg.id_,' ᥀ هذا الامر خدد ليس لك\n  اكتب 『اوامر الاعضاء』لعرض اوامر الاعضاء')
@@ -17013,6 +17048,72 @@ else
 send(msg.chat_id_, msg.id_,'᥀ لا يوجد رابط ارسل ضع رابط') 
 end 
 end,nil) 
+end
+if Text and Text:match("^/t7km1 (.*)$") then
+local userid = Text:match("^/t7km1 (.*)$")
+if not Mod(data) then
+local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local text = 'تم الغاء كتم العضو'
+database:srem(bot_id..'Muted:User'..Chat_id, userid)
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
+end
+if Text and Text:match("^/t7km2 (.*)$") then
+local userid = Text:match("^/t7km2 (.*)$")
+if not Mod(data) then
+local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local text = 'تم كتم العضو'
+database:sadd(bot_id..'Muted:User'..Chat_id, userid)
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
+end
+if Text and Text:match("^/t7km3 (.*)$") then
+local userid = Text:match("^/t7km3 (.*)$")
+if not Mod(data) then
+local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local text = 'تم الغاء حظر العضو'
+tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = Chat_id, user_id_ = userid, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
+end
+if Text and Text:match("^/t7km4 (.*)$") then
+local userid = Text:match("^/t7km4 (.*)$")
+if not Mod(data) then
+local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local text = 'تم حظر العضو'
+tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = Chat_id, user_id_ = userid, status_ = { ID = "ChatMemberStatusKicked" },},function(arg,data) end,nil)
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
+end
+if Text and Text:match("^/t7km5 (.*)$") then
+local userid = Text:match("^/t7km5 (.*)$")
+if not Mod(data) then
+local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local text = 'تم الغاء تقيد العضو'
+https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..Chat_id.."&user_id="..userid.."&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
+end
+if Text and Text:match("^/t7km6 (.*)$") then
+local userid = Text:match("^/t7km6 (.*)$")
+if not Mod(data) then
+local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local text = 'تم تقيد العضو'
+https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..Chat_id.."&user_id="..userid.."&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
 if Text == '/help1' then
 if not Mod(data) then
