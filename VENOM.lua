@@ -7555,7 +7555,7 @@ local Text = "᥀ اختر الاوامر من الاسفل "
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'رفع مطور', callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_}
+{text = 'رفع مطور', callback_data=msg.sender_user_id_.."/SetMem:"..result.sender_user_id_}
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -17035,8 +17035,8 @@ send(msg.chat_id_, msg.id_,'᥀ لا يوجد رابط ارسل ضع رابط')
 end 
 end,nil) 
 end
-if text and text:match("^:SetMem (%d+)$") and Devban(msg) then
-local userid = text:match("^:SetMem (%d+)$")
+if text and text:match("^/SetMem (%d+)$") and Devban(msg) then
+local userid = text:match("^/SetMem (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local X_G_33 = bot_data:get(ban_id..'text:ch:user')
 if X_G_33 then
