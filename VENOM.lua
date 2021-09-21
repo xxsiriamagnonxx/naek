@@ -17091,7 +17091,6 @@ return false
 end
 bot_data:sadd(ban_id..'Sudo:User', userid)
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
-return false 
 end,nil)
 end
 if data.first_name_ then
