@@ -7615,8 +7615,8 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false 
 end
-if text and text:match("^:SetMem (%d+)$") and Devban(msg) then
-local userid = text:match("^:SetMem (%d+)$")
+if text and text:match("^رفع مطور (%d+)$") and Devban(msg) then
+local userid = text:match("^رفع مطور (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local X_G_33 = bot_data:get(ban_id..'text:ch:user')
 if X_G_33 then
@@ -12932,7 +12932,7 @@ send(msg.chat_id_, msg.reply_to_message_id_, 'ريب 4')
 send(msg.chat_id_, msg.reply_to_message_id_, 'ريب 5')
 send(msg.chat_id_, msg.reply_to_message_id_, 'مات 😂')
 send(msg.chat_id_, msg.reply_to_message_id_, 'بفتث 😂')
-send(msg.chat_id_, msg.id_, 'امسح بقي عشان ميحصلش حاجه للروم من الشتايم 😚')
+send(msg.chat_id_, msg.id_, 'امسح بقي عشان ميحصلش حاجه للروم من الشتايم ??')
 return false 
 end,nil)
 end
@@ -16202,7 +16202,7 @@ Msᴀɢ ~ #msgs
 𝟓 𝟔 𖡻 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
 [[
-► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
+► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username ??  ꙰
 ► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
@@ -17035,12 +17035,12 @@ send(msg.chat_id_, msg.id_,'᥀ لا يوجد رابط ارسل ضع رابط')
 end 
 end,nil) 
 end
-if text and text:match('amr@(%d+)/user@(%d+)/rwtpa1') then
-local userid = text:match("^rwtpa1 (%d+)$")
+if text and text:match("^:SetMem (%d+)$") and Devban(msg) then
+local userid = text:match("^:SetMem (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = bot_data:get(ban_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
+local X_G_33 = bot_data:get(ban_id..'text:ch:user')
+if X_G_33 then
+send(msg.chat_id_, msg.id_,'['..X_G_33..']')
 else
 send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
@@ -17049,7 +17049,7 @@ end
 bot_data:sadd(ban_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'X_G_33')..')'
 status  = '\n ᥀ تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
