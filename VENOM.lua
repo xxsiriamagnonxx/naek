@@ -17097,7 +17097,7 @@ usertext = '\n ᥀ الـعـضو   ⋙ ['..textchuser..'](t.me/'..(data.usernam
 status  = '\n ᥀ تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
-usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+usertext = '\n ᥀ الـعـضو   ⋙ ['..textchuser..'](t.me/'..(data.username_ or 'textchuser')..')'
 status  = '\n ᥀ تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 return false 
