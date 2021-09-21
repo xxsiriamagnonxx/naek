@@ -3770,7 +3770,7 @@ local Text =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '◗رفع مطور◖', callback_data="/rwtpa1"},{text = '◗تنزيل مطور◖', callback_data="/rwtpa11"},
+{text = 'رفع مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/rwtpa1"},
 },
 {
 {text = 'رفع مطور ثانوي◖', callback_data="/rwtpa2"},
@@ -17077,8 +17077,8 @@ send(msg.chat_id_, msg.id_,'᥀ لا يوجد رابط ارسل ضع رابط')
 end 
 end,nil) 
 end
-if Text and Text:match("^rwtpa1 (.*)$") then
-local userid = Text:match("^/rwtpa1 (.*)$")
+if Text and Text:match('amr@(%d+)/user@(%d+)/rwtpa1') then
+local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/rwtpa1$")}
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
@@ -18423,7 +18423,7 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 if Text == '/help38' then
-local Text = 'لتجربه العلبه عليك ان تكتب السمايلات في الشات🔰'
+local Text = 'لتجربه العلبه عليك ان تكتب السمايلات في الشات??'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(Text).."&show_alert=true")
 return false
 end
