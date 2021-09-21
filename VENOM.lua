@@ -17100,7 +17100,6 @@ else
 usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
 status  = '\n ᥀ تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
-end
 return false 
 end
 if Text and Text:match("^/t7km1 (.*)$") then
