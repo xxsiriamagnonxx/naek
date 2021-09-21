@@ -17096,6 +17096,7 @@ return false
 end,nil)
 end
 end
+end
 if data.first_name_ then
 usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
 status  = '\n ᥀ تم ترقيته مطور'
