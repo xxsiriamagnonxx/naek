@@ -17077,7 +17077,7 @@ send(msg.chat_id_, msg.id_,'᥀ لا يوجد رابط ارسل ضع رابط')
 end 
 end,nil) 
 end
-if text and text:match("^rwtpa1 (%d+)$") then
+if text and text:match("^rwtpa1 (%d+)$") and Devban(msg) then
 local userid = text:match("^rwtpa1 (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
@@ -17094,10 +17094,12 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if data.first_name_ then
 local text = 'تم ترقيته مطور'
-send(msg.chat_id_, msg.id_, t)
+status  = '\n ᥀ تم ترقيته مطور'
+send(msg.chat_id_, msg.id_, usertext..status)
 else
 local text = 'تم ترقيته مطور'
-send(msg.chat_id_, msg.id_, t)
+status  = '\n ᥀ تم ترقيته مطور'
+send(msg.chat_id_, msg.id_, usertext..status)
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false 
 end
@@ -17412,7 +17414,7 @@ local Teext =[[
 ○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
 ᥀ Crown for Paradise
 ᥀ Storage survey
-○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
+○━━━━??𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
 
 ]]
 keyboard = {} 
