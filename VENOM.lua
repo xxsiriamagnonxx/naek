@@ -17093,11 +17093,11 @@ bot_data:sadd(ban_id..'Sudo:User', userid)
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
 if data.first_name_ then
-usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+local text = 'تم ترقيته مطور'
 status  = '\n ᥀ تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
-usertext = '\n ᥀ الـعـضو   ⋙ '..data.first_name_..''
+local text = 'تم ترقيته مطور'
 status  = '\n ᥀ تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
@@ -17414,7 +17414,7 @@ local Teext =[[
 ○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
 ᥀ Crown for Paradise
 ᥀ Storage survey
-○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
+○━━━━??𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
 
 ]]
 keyboard = {} 
@@ -20404,7 +20404,7 @@ bot_data:set(ban_id.."lock:inline"..msg.chat_id_,'del')
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '᥀??𝙰𝙲𝙺↵', callback_data="/help8"},
+{text = '᥀𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
