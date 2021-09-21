@@ -3757,11 +3757,11 @@ end
 ---------------------- الاوامر الجديدة
 if text == 'تحكم' and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
-local X_G_33 = database:get(ban_id..'text:ch:user')
+local X_G_33 = bot_data:get(ban_id..'text:ch:user')
 if X_G_33 then
 send(msg.chat_id_, msg.id_,'['..X_G_33..']')
 else
-send(msg.chat_id_, msg.id_,'☭لا تستطيع استخدام البوت \n ☭يرجى الاشتراك بالقناه اولا \n ☭اشترك هنا ['..database:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'☭لا تستطيع استخدام البوت \n ☭يرجى الاشتراك بالقناه اولا \n ☭اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
@@ -17057,7 +17057,7 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local text = 'تم الغاء كتم العضو'
-database:srem(ban_id..'Muted:User'..Chat_id, userid)
+bot_data:srem(ban_id..'Muted:User'..Chat_id, userid)
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
 if Text and Text:match("^/t7km2 (.*)$") then
@@ -17068,7 +17068,7 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local text = 'تم كتم العضو'
-database:sadd(ban_id..'Muted:User'..Chat_id, userid)
+bot_data:sadd(ban_id..'Muted:User'..Chat_id, userid)
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
 if Text and Text:match("^/t7km3 (.*)$") then
