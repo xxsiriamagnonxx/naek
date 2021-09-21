@@ -17085,7 +17085,7 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local text = 'تم رفع العضو مطور'
-bot_data:sadd(ban_id..'Sudo:User', userid)
+bot_data:srem(ban_id..'Sudo:User'..Chat_id, userid)
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
 if Text and Text:match("^/t7km2 (.*)$") then
@@ -17096,15 +17096,8 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local text = 'تم تنزيله من المطور'
-bot_data:srem(ban_id..'Sudo:User', userid)
+bot_data:sadd(ban_id..'Sudo:User'..Chat_id, userid)
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
-end
-if Text and Text:match("^/t7km1 (.*)$") then
-local userid = Text:match("^/t7km1 (.*)$")
-if not Mod(data) then
-local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
 end
 local text = 'تم الغاء كتم العضو'
 bot_data:srem(ban_id..'Muted:User'..Chat_id, userid)
