@@ -17035,18 +17035,9 @@ send(msg.chat_id_, msg.id_,'᥀ لا يوجد رابط ارسل ضع رابط')
 end 
 end,nil) 
 end
-if Text and Text:match('amr@(%d+)/user@(%d+)/rwtpa1') then
+if text and text:match('amr@(%d+)/user@(%d+)/rwtpa1') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/rwtpa1$")}
-if AddChannel(msg.sender_user_id_) == false then
-local X_G_33 = bot_data:get(ban_id..'text:ch:user')
-if X_G_33 then
-send(msg.chat_id_, msg.id_,'['..X_G_33..']')
-else
-send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استتخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-end
-return false
-end
+if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 bot_data:sadd(ban_id..'Sudo:User', userid)
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
@@ -17409,7 +17400,7 @@ local Teext =[[
 ᥀ YouTube ↵ Games
 ᥀ Weather + area
 ᥀ Dark ↵link
-○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
+○━━━━𝘴𝓲??𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
 ᥀ My name is 
 ᥀ My Juices ↵ Delete my juices
 ᥀ Powers ↵ Ping
@@ -18945,7 +18936,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '•Aꫝꪑꫀᦔ𝅘𝅥𝅯♪',url="t.me/AHMED_MERO_love"},{text = '•𝘬ꪖ𝘴ꪖꫝꪖ 𝅘𝅥𝅮♪', url="t.me/MR_AAS"}},
-{{text = '᥀𝙱𝙰𝙲𝙺↵', callback_data="/HHH"}},
+{{text = '᥀𝙱𝙰𝙲??↵', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
