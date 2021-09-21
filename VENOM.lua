@@ -17037,28 +17037,14 @@ end,nil)
 end
 if text and text:match("^/SetMem (%d+)$") and Devban(msg) then
 local userid = text:match("^/SetMem (%d+)$")
-if AddChannel(msg.sender_user_id_) == false then
-local X_G_33 = bot_data:get(ban_id..'text:ch:user')
-if X_G_33 then
-send(msg.chat_id_, msg.id_,'['..X_G_33..']')
-else
-send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
-end
+if not Mod(data) then
+local notText = 'يجب ان تكون ادمن لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
+local text = 'تم رفعه مطور'
 bot_data:sadd(ban_id..'Sudo:User', userid)
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
-if data.first_name_ then
-usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'X_G_33')..')'
-status  = '\n ᥀ تم ترقيته مطور'
-send(msg.chat_id_, msg.id_, usertext..status)
-else
-usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
-status  = '\n ᥀ تم ترقيته مطور'
-send(msg.chat_id_, msg.id_, usertext..status)
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
-end;end,nil)
+Reply_Status(msg,userid,"reply","᥀تم تـرقيتـه مطور")  
 return false 
 end
 if Text and Text:match("^/t7km1 (.*)$") then
@@ -20394,7 +20380,7 @@ bot_data:set(ban_id.."lock_edit_med"..msg.chat_id_,'del')
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '᥀𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
+{text = '᥀??𝙰𝙲𝙺↵', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
