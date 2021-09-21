@@ -17038,6 +17038,8 @@ end
 if text and text:match('amr@(%d+)/user@(%d+)/rwtpa1') then
 local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/rwtpa1$")}
 if tonumber(users[1]) == tonumber(data.sender_user_id_) then
+sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
+end
 bot_data:sadd(ban_id..'Sudo:User', userid)
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end
@@ -17400,7 +17402,7 @@ local Teext =[[
 ᥀ YouTube ↵ Games
 ᥀ Weather + area
 ᥀ Dark ↵link
-○━━━━𝘴𝓲??𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
+○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
 ᥀ My name is 
 ᥀ My Juices ↵ Delete my juices
 ᥀ Powers ↵ Ping
@@ -18936,7 +18938,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '•Aꫝꪑꫀᦔ𝅘𝅥𝅯♪',url="t.me/AHMED_MERO_love"},{text = '•𝘬ꪖ𝘴ꪖꫝꪖ 𝅘𝅥𝅮♪', url="t.me/MR_AAS"}},
-{{text = '᥀𝙱𝙰𝙲??↵', callback_data="/HHH"}},
+{{text = '᥀𝙱𝙰𝙲𝙺↵', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
