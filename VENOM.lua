@@ -17036,7 +17036,7 @@ end
 end,nil) 
 end
 if text and text:match('amr@(%d+)/user@(%d+)/rwtpa1') then
-local users = {string.match(Text,"^amr@(%d+)/user@(%d+)/rwtpa1$")}
+local userid = text:match("^rwtpa1 (%d+)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
@@ -17058,7 +17058,6 @@ status  = '\n ᥀ تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
-end
 end
 if Text and Text:match("^/t7km1 (.*)$") then
 local userid = Text:match("^/t7km1 (.*)$")
