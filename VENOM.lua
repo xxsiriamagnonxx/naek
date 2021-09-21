@@ -17041,16 +17041,12 @@ if tonumber(users[1]) == tonumber(data.sender_user_id_) then
 sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 bot_data:sadd(ban_id..'Sudo:User', userid)
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
+tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
+usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+status  = '\n ᥀ تم ترقيته مطور'
+send(msg.chat_id_, msg.id_, usertext..status)
+end,nil)
 end
-if data.first_name_ then
-local text = 'تم ترقيته مطور'
-status  = '\n ᥀ تم ترقيته مطور'
-send(msg.chat_id_, msg.id_," ᥀ تم رفعه مطور")
-else
-local text = 'تم ترقيته مطور'
-status  = '\n ᥀ تم ترقيته مطور'
-send(msg.chat_id_, msg.id_," ᥀ تم رفعه مطور")
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false 
 end
