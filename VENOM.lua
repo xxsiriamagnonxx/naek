@@ -17047,6 +17047,7 @@ end
 return false
 end
 bot_data:sadd(ban_id..'Sudo:User', userid)
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'X_G_33')..')'
@@ -17056,6 +17057,7 @@ else
 usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
 status  = '\n ᥀ تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(text)..'&message_id='..msg_idd) 
 end;end,nil)
 return false 
 end
