@@ -17095,11 +17095,11 @@ end
 if data.first_name_ then
 local text = 'تم ترقيته مطور'
 status  = '\n ᥀ تم ترقيته مطور'
-send(msg.chat_id_, msg.id_, usertext..status)
+send(msg.chat_id_, msg.id_, t)
 else
 local text = 'تم ترقيته مطور'
 status  = '\n ᥀ تم ترقيته مطور'
-send(msg.chat_id_, msg.id_, usertext..status)
+send(msg.chat_id_, msg.id_, t)
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false 
 end
@@ -17414,7 +17414,7 @@ local Teext =[[
 ○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
 ᥀ Crown for Paradise
 ᥀ Storage survey
-○━━━━??𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
+○━━━━𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ㇱ ✟━━━━○
 
 ]]
 keyboard = {} 
