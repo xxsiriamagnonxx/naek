@@ -6223,11 +6223,23 @@ return false
 end
 function start_function(extra, result, success)
 local Text = 'ماذا تريد ان تفعل عزيزي '..Rutba(msg.sender_user_id_,msg.chat_id_)
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'تنزيل رتبه', callback_data="/t7kmrtb1 "..result.sender_user_id_},{text = 'رفع رتبه', callback_data="/t7kmrtb2 "..result.sender_user_id_},
-},
+if Devban(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_.."/t7kmrtb2_4"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_.."/t7kmrtb2_2"..result.sender_user_id_}},{{text="رفع مطور ثانوي",callback_data=msg.sender_user_id_..":SetSecondSudo:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif Dev(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_.."/t7kmrtb2_4"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_.."/t7kmrtb2_2"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif SudoBot(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_.."/t7kmrtb2_4"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif CoSu(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_.."/t7kmrtb2_4"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif BasicConstructor(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع
+منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif Constructor(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif Manager(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
+elseif Mod(msg) then
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
