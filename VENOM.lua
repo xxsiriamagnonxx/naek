@@ -17169,32 +17169,20 @@ local notText = '✘ يجب ان تكون ادمن للضغط هنا'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Teext = 'رتبته الان ('..Rutba(userid,Chat_id)..') ماذا ستفعل به 🙂'
+local Teext = 'رتبته الان ('..Rutba(userid,Chat_id)..') اختر الرتبه التي تود ترقيته اليهـا 🎮عن طريق الازرار المحدده اسفل'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'رفع مطور ثانوي', callback_data="/t7kmrtb2_1 "..userid},
+{text = 'رفع مطور ثانوي', callback_data="/t7kmrtb2_1 "..userid},{text = 'رفع مطور', callback_data="/t7kmrtb2_2 "..userid},
 },
 {
-{text = 'رفع مطور', callback_data="/t7kmrtb2_2 "..userid},
+{text = 'رفع مالك', callback_data="/t7kmrtb2_3 "..userid},{text = 'رفع منشئ اساسي', callback_data="/t7kmrtb2_4 "..userid},
 },
 {
-{text = 'رفع مالك', callback_data="/t7kmrtb2_3 "..userid},
+{text = 'رفع منشئ', callback_data="/t7kmrtb2_5 "..userid},{text = 'رفع مدير', callback_data="/t7kmrtb2_6 "..userid},
 },
 {
-{text = 'رفع منشئ اساسي', callback_data="/t7kmrtb2_4 "..userid},
-},
-{
-{text = 'رفع منشئ', callback_data="/t7kmrtb2_5 "..userid},
-},
-{
-{text = 'رفع مدير', callback_data="/t7kmrtb2_6 "..userid},
-},
-{
-{text = 'رفع ادمن', callback_data="/t7kmrtb2_7 "..userid},
-},
-{
-{text = 'رفع مميز', callback_data="/t7kmrtb2_8 "..userid},
+{text = 'رفع ادمن', callback_data="/t7kmrtb2_7 "..userid},{text = 'رفع مميز', callback_data="/t7kmrtb2_8 "..userid},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
