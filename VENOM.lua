@@ -17227,6 +17227,12 @@ end;end,nil)
 return false 
 end
 
+if text and text:match("^/t7kmrtb2_1 (%d+)$") and SudoBot(msg) then
+local userid = text:match("^/t7kmrtb2_1(%d+)$")
+bot_data:sadd(ban_id.."Dev:ban:2", userid)
+Reply_Status(msg,userid,"reply","● تم ترقيته مطور ثانوي في البوت")  
+return false 
+end
 if Text == '/help1' then
 if not Mod(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
