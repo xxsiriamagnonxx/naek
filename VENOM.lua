@@ -6233,7 +6233,6 @@ elseif CoSu(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_.."/t7kmrtb2_4"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
 elseif BasicConstructor(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_.."/t7kmrtb2_4"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
-منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
 elseif Constructor(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
 elseif Manager(msg) then
@@ -15965,7 +15964,7 @@ Msᴀɢ ~ #msgs
 • ▽ | 𝑺𝑻𝑨 : #stast ☥
 • ⊠ | 𝑰𝑫 : #id ‌‌‏♕
 • ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
-• ❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
+• ❏ | 𝑾𝒆??𝒄𝒐𝒎𝒆 :
 • ❏ | 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
 [[
