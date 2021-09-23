@@ -6226,7 +6226,7 @@ local Text = 'ماذا تريد ان تفعل عزيزي '..Rutba(msg.sender_use
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'تنزيل رتبه', callback_data="/t7kmrtb1 "..result.sender_user_id_},{text = 'رفع رتبه', callback_data="/t7kmrtb2 "..result.sender_user_id_},
+{text = '◗تنزيل رتبه◖', callback_data="/t7kmrtb1 "..result.sender_user_id_},{text = '◗رفع رتبه', callback_data="/t7kmrtb2 "..result.sender_user_id_},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -15306,7 +15306,7 @@ local List = {
 
 • 🖤 | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗖𝗛 - 『@X_G_33』 ᥀.
+• ?? | 𝗖𝗛 - 『@X_G_33』 ᥀.
 ]],
 [[
 • USE 𖦹 #username 
@@ -17135,28 +17135,16 @@ local Teext = 'رتبته الان ('..Rutba(userid,Chat_id)..') ماذا ستف
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'تنزيل مطور ثانوي', callback_data="/t7kmrtb1_1 "..userid},
+{text = '◗تنزيل مطور ثانوي◖', callback_data="/t7kmrtb1_1 "..userid},{text = '◗تنزيل مطور◖', callback_data="/t7kmrtb1_2 "..userid},
 },
 {
-{text = 'تنزيل مطور', callback_data="/t7kmrtb1_2 "..userid},
+{text = '◗تنزيل مالك◖', callback_data="/t7kmrtb1_3 "..userid},{text = '◗تنزيل منشئ اساسي◖', callback_data="/t7kmrtb1_4 "..userid},
 },
 {
-{text = 'تنزيل مالك', callback_data="/t7kmrtb1_3 "..userid},
+{text = '◗تنزيل منشئ◖', callback_data="/t7kmrtb1_5 "..userid},{text = '◗تنزيل مدير◖', callback_data="/t7kmrtb1_6 "..userid},
 },
 {
-{text = 'تنزيل منشئ اساسي', callback_data="/t7kmrtb1_4 "..userid},
-},
-{
-{text = 'تنزيل منشئ', callback_data="/t7kmrtb1_5 "..userid},
-},
-{
-{text = 'تنزيل مدير', callback_data="/t7kmrtb1_6 "..userid},
-},
-{
-{text = 'تنزيل ادمن', callback_data="/t7kmrtb1_7 "..userid},
-},
-{
-{text = 'تنزيل مميز', callback_data="/t7kmrtb1_8 "..userid},
+{text = '◗تنزيل ادمن◖', callback_data="/t7kmrtb1_7 "..userid},{text = '◗تنزيل مميز◖', callback_data="/t7kmrtb1_8 "..userid},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17169,20 +17157,20 @@ local notText = '✘ يجب ان تكون ادمن للضغط هنا'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Teext = 'رتبته الان ('..Rutba(userid,Chat_id)..') اختر الرتبه التي تود ترقيته اليهـا 🎮عن طريق الازرار المحدده اسفل'
+local Teext = 'رتبته الان ('..Rutba(userid,Chat_id)..') قم بالضغط علي الازرار المدرجه بالقائمه للتحكم برتبته 🎮'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'رفع مطور ثانوي', callback_data="/t7kmrtb2_1 "..userid},{text = 'رفع مطور', callback_data="/t7kmrtb2_2 "..userid},
+{text = '◗رفع مطور ثانوي◖', callback_data="/t7kmrtb2_1 "..userid},{text = '◗رفع مطور◖', callback_data="/t7kmrtb2_2 "..userid},
 },
 {
-{text = 'رفع مالك', callback_data="/t7kmrtb2_3 "..userid},{text = 'رفع منشئ اساسي', callback_data="/t7kmrtb2_4 "..userid},
+{text = '◗رفع مالك◖', callback_data="/t7kmrtb2_3 "..userid},{text = '◗رفع منشئ اساسي◖', callback_data="/t7kmrtb2_4 "..userid},
 },
 {
-{text = 'رفع منشئ', callback_data="/t7kmrtb2_5 "..userid},{text = 'رفع مدير', callback_data="/t7kmrtb2_6 "..userid},
+{text = '◗رفع منشئ◖', callback_data="/t7kmrtb2_5 "..userid},{text = '◗رفع مدير◖', callback_data="/t7kmrtb2_6 "..userid},
 },
 {
-{text = 'رفع ادمن', callback_data="/t7kmrtb2_7 "..userid},{text = 'رفع مميز', callback_data="/t7kmrtb2_8 "..userid},
+{text = '◗رفع ادمن◖', callback_data="/t7kmrtb2_7 "..userid},{text = '◗رفع مميز◖', callback_data="/t7kmrtb2_8 "..userid},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17387,6 +17375,48 @@ local  statuss  = '\n ᥀ تم ترقيته مميز'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end;end,nil)
 return false
+end
+
+if Text and Text:match("^/t7kmrtb1_2 (.*)$") then
+local userid = Text:match("^/t7kmrtb1_2 (.*)$")
+if not msa3d(data) then
+local notText = 'يجب ان تكون رتبتك اعلي لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = bot_data:get(ban_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+end
+return false
+end
+bot_data:srem(ban_id..'Sudo:User', userid)
+tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
+if data.first_name_ then
+usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+status  = '\n ᥀ تم تنزيله من المطورين'
+send(msg.chat_id_, msg.id_, usertext..status)
+else
+usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
+status  = '\n ᥀ تم تنزيله من المطورين'
+send(msg.chat_id_, msg.id_, usertext..status)
+end;end,nil)
+return false 
+end
+
+if Text and Text:match("^/t7kmrtb1_1 (.*)$") then
+local userid = Text:match("^/t7kmrtb1_1 (.*)$")
+if not msa3d(data) then
+local notText = 'يجب ان تكون رتبتك اعلي لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+bot_data:srem(ban_id.."Dev:ban:2", userid)
+Reply_Status(msg,userid,"reply","᥀ تم تنزيله من المطور ثانويين")  
+return false 
 end
 
 if Text == '/help1' then
