@@ -6212,35 +6212,45 @@ end
 end
 
 if text == 'تحكم الرتبه' and msg.reply_to_message_id_ and Mod(msg) then
-function prom_reply(extra, result, success)
-tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,dp) 
-if dp.first_name_ == false then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⦿︙الحساب محذوف", 1, "md")
-return false  
+if AddChannel(msg.sender_user_id_) == false then
+local X_G_33 = bot_data:get(ban_id..'text:ch:user')
+if X_G_33 then
+send(msg.chat_id_, msg.id_,'['..X_G_33..']')
+else
+send(msg.chat_id_, msg.id_,'☭لا تستطيع استخدام البوت \n ☭يرجى الاشتراك بالقناه اولا \n ☭اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
+return false
+end
+function start_function(extra, result, success)
 local Text = 'ماذا تريد ان تفعل عزيزي '..Rutba(msg.sender_user_id_,msg.chat_id_)
 if Devban(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_.."/t7kmrtb2_4"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_.."/t7kmrtb2_2"..result.sender_user_id_}},{{text="رفع مطور ثانوي",callback_data=msg.sender_user_id_..":SetSecondSudo:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
-elseif Dev(msg) then
+else
+if Dev(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_.."/t7kmrtb2_4"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_.."/t7kmrtb2_2"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
-elseif SudoBot(msg) then
+else
+if SudoBot(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_.."/t7kmrtb2_4"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
-elseif CoSu(msg) then
+else
+if CoSu(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_.."/t7kmrtb2_4"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
-elseif BasicConstructor(msg) then
+else
+if BasicConstructor(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_.."/t7kmrtb2_5"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_.."/t7kmrtb2_4"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
-elseif Constructor(msg) then
+else
+if Constructor(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_.."/t7kmrtb2_6"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
-elseif Manager(msg) then
+else
+if Manager(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
-elseif Mod(msg) then
+else
+if Mod(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
-SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
-end,nil)
-end 
-if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
-getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
-end 
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
+return false
 end
 if text == 'جلب النسخه' and Devban(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
@@ -15092,7 +15102,7 @@ local List = {
 𖤂 ~ 𝑚??𝑔 #msgs ??
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
-𖤂 ~ ??𝑑𝑖𝑡 #edit 𖤐
+𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
 𖤂 ~ 𝗖𝗛 - 『@X_G_33』 ᥀.
 ]],
 [[
@@ -15515,7 +15525,7 @@ Msᴀɢ ~ #msgs
 [[
 ➜𝗨𝗦??𝗥𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
-➜𝗦𝗧𝗔𝗧𝗦 : #stast
+➜𝗦𝗧𝗔𝗧?? : #stast
 ➜𝗜𝗗 : #id
 ➜𝗖𝗛 - 『@X_G_33』 💞.
 ]],
