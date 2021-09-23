@@ -17204,6 +17204,11 @@ end
 
 if Text and Text:match("^/t7kmrtb2_2 (.*)$") then
 local userid = Text:match("^/t7kmrtb2_2 (.*)$")
+if not msa3d(data) then
+local notText = 'يجب ان تكون رتبتك اعلي لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = bot_data:get(ban_id..'text:ch:user')
 if textchuser then
