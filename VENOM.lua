@@ -6252,6 +6252,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
+end
 if text == 'جلب النسخه' and Devban(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local X_G_33 = bot_data:get(ban_id..'text:ch:user')
@@ -15080,7 +15081,7 @@ local List = {
 - رسائلڪ  الطيفهہَ ⁞ #msgs 💘 ٬
 - رتبتڪ الحلوه ⁞ #stast  💘٬
 - سحڪاتڪ الفول ⁞ #edit 💘 ٬
-- 𝗖𝗛 - 『@X_G_33』 💞.
+- ??𝗛 - 『@X_G_33』 💞.
 ]],
 [[
 𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
@@ -15525,7 +15526,7 @@ Msᴀɢ ~ #msgs
 [[
 ➜𝗨𝗦??𝗥𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
-➜𝗦𝗧𝗔𝗧?? : #stast
+➜𝗦𝗧??𝗧𝗦 : #stast
 ➜𝗜𝗗 : #id
 ➜𝗖𝗛 - 『@X_G_33』 💞.
 ]],
