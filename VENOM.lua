@@ -17233,6 +17233,32 @@ bot_data:sadd(ban_id.."Dev:ban:2", userid)
 Reply_Status(msg,userid,"reply","● تم ترقيته مطور ثانوي في البوت")  
 return false 
 end
+
+if Text and Text:match("^/t7kmrtb2_4 (.*)$") then
+local userid = Text:match("^/t7kmrtb2_4 (.*)$")
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = bot_data:get(ban_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+end
+return false
+end
+bot_data:sadd(ban_id..'Basic:Constructor'..msg.chat_id_, userid)
+tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
+if data.first_name_ then
+usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+status  = '\n ᥀ تم ترقيته منشئ اساسي'
+send(msg.chat_id_, msg.id_, usertext..status)
+else
+usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
+status  = '\n ᥀ تم ترقيته منشئ اساسي'
+send(msg.chat_id_, msg.id_, usertext..status)
+end;end,nil)
+return false
+end
+
 if Text == '/help1' then
 if not Mod(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
