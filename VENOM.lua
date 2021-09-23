@@ -6239,7 +6239,6 @@ elseif Manager(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_.."/t7kmrtb2_7"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
 elseif Mod(msg) then
 inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_}},{{text = '⦿ Team Queen .',url="t.me/Source_Queen"}}}
-}
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
@@ -15964,7 +15963,7 @@ Msᴀɢ ~ #msgs
 • ▽ | 𝑺𝑻𝑨 : #stast ☥
 • ⊠ | 𝑰𝑫 : #id ‌‌‏♕
 • ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
-• ❏ | 𝑾𝒆??𝒄𝒐𝒎𝒆 :
+• ❏ | 𝑾𝒆𝒍??𝒐𝒎𝒆 :
 • ❏ | 𝗖𝗛 - 『@X_G_33』 ᥀
 ]],
 [[
