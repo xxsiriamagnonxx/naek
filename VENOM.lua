@@ -17419,6 +17419,125 @@ Reply_Status(msg,userid,"reply","᥀ تم تنزيله من المطور ثان�
 return false 
 end
 
+if Text and Text:match("^/t7kmrtb1_2 (.*)$") then
+local userid = Text:match("^/t7kmrtb1_2 (.*)$")
+if not msa3d(data) then
+local notText = 'يجب ان تكون رتبتك اعلي لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = bot_data:get(ban_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+end
+return false
+end
+bot_data:srem(ban_id..'Sudo:User', userid)
+tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
+if data.first_name_ then
+usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+status  = '\n ᥀ تم تنزيله من المطورين'
+send(msg.chat_id_, msg.id_, usertext..status)
+else
+usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
+status  = '\n ᥀ تم تنزيله من المطورين'
+send(msg.chat_id_, msg.id_, usertext..status)
+end;end,nil)
+return false 
+end
+
+if Text and Text:match("^/t7kmrtb1_4 (.*)$") then
+local userid = Text:match("^/t7kmrtb1_4 (.*)$")
+if not CoSu(data) then
+local notText = 'يجب ان تكون رتبتك اعلي لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = bot_data:get(ban_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+end
+return false
+end
+bot_data:srem(ban_id..'Basic:Constructor'..msg.chat_id_, userid)
+tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
+if data.first_name_ then
+usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+status  = '\n ᥀ تم تنزيله من الاساسيين'
+send(msg.chat_id_, msg.id_, usertext..status)
+else
+usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
+status  = '\n ᥀ تم تنزيله من الاساسيين'
+send(msg.chat_id_, msg.id_, usertext..status)
+end;end,nil)
+return false
+end
+
+if Text and Text:match("^/t7kmrtb1_3 (.*)$") then
+local userid = Text:match("^/t7kmrtb1_3 (.*)$")
+if not CoSu(data) then
+local notText = 'يجب ان تكون رتبتك اعلي لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = bot_data:get(ban_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+end
+return false
+end
+bot_data:srem(ban_id..'CoSu'..msg.chat_id_, userid)
+tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
+if data.first_name_ then
+usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+status  = '\n ᥀ تم تنزيله من مالك'
+send(msg.chat_id_, msg.id_, usertext..status)
+else
+usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
+status  = '\n ᥀ تم تنزيله من مالك'
+send(msg.chat_id_, msg.id_, usertext..status)
+end;end,nil)
+return false
+end
+
+if Text and Text:match("^/t7kmrtb1_5 (.*)$") then
+local userid = Text:match("^/t7kmrtb1_5 (.*)$")
+if not BasicConstructor(data) then
+local notText = 'يجب ان تكون رتبتك اعلي لاستخدام هذا الامر'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = bot_data:get(ban_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' ᥀ لا تستطيع استخدام البوت \n ᥀  يرجى الاشتراك بالقناه اولا \n ᥀  اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+end
+return false
+end
+bot_data:srem(ban_id..'Constructor'..msg.chat_id_, userid)
+tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
+if data.first_name_ then
+usertext = '\n ᥀ الـعـضو   ⋙ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+status  = '\n ᥀ تم تنزيله من المنشئين'
+send(msg.chat_id_, msg.id_, usertext..status)
+else
+usertext = '\n ᥀ الـعـضو   ⋙ '..userid..''
+status  = '\n ᥀ تم تنزيله من المنشئين'
+send(msg.chat_id_, msg.id_, usertext..status)
+end;end,nil)
+end
+
 if Text == '/help1' then
 if not Mod(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
@@ -18833,7 +18952,7 @@ keyboard.inline_keyboard = {
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '⇣ 𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ𝘳ᥴꫀ‌ ⇣', url="t.me/X_G_33"}},
+{{text = '⇣ 𝘴𝓲𝘳𝓲ꪖ 𝘴ꪊ??ᥴꫀ‌ ⇣', url="t.me/X_G_33"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
