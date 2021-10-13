@@ -6114,7 +6114,7 @@ end;end,nil)
 return false
 end
 ------------------------------------------------------------------------
-if text == "اسمي" and not bot_data:get(rob_id..'ghiktr'..msg.chat_id_) then     
+if text == "اسمي" and not bot_data:get(ban_id..'ghiktr'..msg.chat_id_) then     
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 if result.username_ then
 username = result.username_ 
@@ -6122,7 +6122,7 @@ else
 username = 'hms_00'
 end
 local msg_id = msg.id_/2097152/0.5  
-local textt = "- ليس لديك صور "..(bot_data:get(rob_id..'Name:Bot_') or 'اخري')
+local textt = "- ليس لديك صور "..(bot_data:get(ban_id..'Name:Bot_') or 'اخري')
 local  ANUBIS = 'https://t.me/Qtdao/71'
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -6139,7 +6139,7 @@ end end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end,nil)
 end
-if text == "بايو" and not bot_data:get(rob_id..'ghiktr'..msg.chat_id_) then     
+if text == "بايو" and not bot_data:get(ban_id..'ghiktr'..msg.chat_id_) then     
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 if result.username_ then
 username = result.username_ 
