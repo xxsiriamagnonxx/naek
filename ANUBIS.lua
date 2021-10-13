@@ -4353,27 +4353,24 @@ end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
-[◍ 𝗧𝗛𝗘 𝗕𝗘𝗦𝗧 𝗘𝗚 𝗦𝗢𝗥𝗖𝗘 𝗜𝗡 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 ⶄ ](t.me/hms_00)
+[◍ 𝙏𝙃𝙀 𝘽𝙀𝙎𝙏 𝙎𝙊𝙍𝘾𝙀 𝙄𝙉 𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈 𝅘𝅥𝅯  ](t.me/hms_00)
 🌖
-[◍ 𝗦𝗨𝗥𝗖𝗘 ˹ꫝꪑ𝘴˼𓃠 𝗕𝗘𝗦𝗧 𝗦𝗨𝗥𝗖𝗘 𖡼 🐾](t.me/hms_00)
 [W𝑒𝑙𝑐𝑜𝑚𝑒 𝑡𝑜 𝑠𝑜𝑢𝑟𝑐𝑒 ℎ𝑚𝑠 𝅘𝅥𝅯 𝄵⁂︎](t.me/hms_00)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'Dꫀꪜꫀꪶꪮρꫀ𝘳𝘴 𝅘𝅥𝅮', callback_data="/units"},{text = 'ᥴꫝꪖꪀꪀꫀꪶ𝅘𝅥𝅯  ', callback_data="/theytry"}},   
+{{text = '⌯المـطوريـن⌯', callback_data="/units"},{text = '⌯القـنـوات⌯  ', callback_data="/theytry"}},   
 {{text ='⌯ اضغط لاضافه البوت لمجمعتك⌯' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/hms_00/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/msmswork/6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 
 
 if text == 'همس' or text == 'hms' or text == ' المبرمجه همس' then
 local Text = [[
-ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝘴𝓲𝘳𝓲ꪖま 𖡼
-ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼
-ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ 𖡼
+𝒕𝒉𝒆 𝒑𝒓𝒐𝒈𝒓𝒂𝒎𝒎𝒆𝒓 𝒘𝒉𝒊𝒔𝒑𝒆𝒓𝒆𝒅 𝒕𝒐 𝒄𝒐𝒎𝒎𝒖𝒏𝒊𝒄𝒂𝒕𝒆 𝒘𝒊𝒕𝒉 𝒉𝒆𝒓 𝒇𝒐𝒍𝒍𝒐𝒘 𝒕𝒉𝒆 𝒃𝒖𝒕𝒕𝒐𝒏𝒔 𝒃𝒆𝒍𝒐𝒘 𝒕𝒉𝒆 𝒎𝒆𝒏𝒖 ☤ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15830,7 +15827,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
-ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast ???? ꙰
+ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast ??🇬 ꙰
 ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
 ᯓ 𝗺𝗦𝗚𝗦 . #msgs 🇪🇬 ꙰
@@ -19402,7 +19399,7 @@ local Teext =[[
 • سعر تنصيب بوتك علي سورس همس⌯
 • لتنصيب بوتك بكامل المميزات (30)ج⌯
 ⇣ للتواصل مع المبرمجين اتبع الازرار ⇣
-•━═━═━═━˹ꫝꪑ𝘴˼𓃠 ═━═━═━•
+•━═━═━═━˹ꫝꪑ??˼𓃠 ═━═━═━•
 
 ]]
 keyboard = {} 
@@ -19457,22 +19454,21 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text ='「ＨＭＳ༗」»࿅ 𓀎',url="t.me/hms_01"},{text ='⌯𝘬ꪖ𝘴ꪖꫝꪖ 𝅘𝅥𝅮•', url="t.me/MR_AAS"}},
-{{text ='⌯𝙱𝙰𝚁𝙻𝙾•',url="t.me/bar_lo0o0"},{text ='⌯𝙶𝟾𝙰𝚉𝙰𝙻•', url="t.me/G8AZAAL"}},
+{{text ='「ＨＭＳ༗」»࿅ 𓀎',url="t.me/hms_01"},{text ='⌯𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴', url="t.me/MR_AAS"}},
 {{text = ' مــطــور الــبــوت 𖢅⤈↫', url="http://t.me/"..sudos.UserName}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 if Text == '/bnada-yquio' then
 local Teext =[[
-ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝚂𝙸𝚁𝙸𝙰𖡌
+ᴘʀᴏɢʀᴀᴍᴍᴇʀ ＨＭＳ
  ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
 ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'Aꫝꪑꫀᦔ𝅘𝅥𝅯"𝖔𝖋𝖋🇬🇺',url="t.me/hms_01"}},
+{{text = 'ＨＭＳ𝖔𝖋𝖋🇬🇺',url="t.me/hms_01"}},
 {{text ='⌯الــقــنــوات•', callback_data="/Ajobanf"},{text ='⌯الــبــارات•', callback_data="/banfai"}},  
 {{text ='⌯الــبــوتــات•', callback_data="/gqjik"}},
 }
@@ -19480,7 +19476,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/Ajobanf' then
 local Teext =[[
-ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝚂𝙸𝚁𝙸𝙰𖡌
+ᴘʀᴏɢʀᴀᴍᴍᴇʀ ＨＭＳ
  ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
 ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
 
@@ -19494,7 +19490,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/banfai' then
 local Teext =[[
-ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝚂𝙸𝚁𝙸𝙰𖡌
+ᴘʀᴏɢʀᴀᴍᴍᴇʀ ＨＭＳ
  ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
 ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
 
@@ -19502,22 +19498,21 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '™𓆩 ★ 𝐀𝐌 🇹🇷✞︎ 𝐓𝐄𝐀𝐌 𝐒𝐏𝐈𝐂𝐘 ★ 𓆪',url="t.me/hms_00"}},
-{{text = 'AＮＵＢＩＳ ༒',url="t.me/hms_00"}},
+{{text = 'ＨＭＳ',url="t.me/hms_00"}},
 {{text = '𖢅⤈ 𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 if Text == '/gqjik' then
 local Teext =[[
-ᴘʀᴏɢʀᴀᴍᴍᴇʀ 𝚂𝙸𝚁𝙸𝙰𖡌
+ᴘʀᴏɢʀᴀᴍᴍᴇʀ ＨＭＳ
  ᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ, 
 ғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ  
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝐌𝐄𝐑𝐎𖣏',url="t.me/SY_RI_Abot"}},
-{{text = '𝘴𝓲𝘳𝓲ꪖ ',url="t.me/SIRIA73_bot"}},
+{{text = '𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴',url="t.me/botatiiii"}},
 {{text = '𖢅⤈ 𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19544,6 +19539,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = ' 𝑠𝑜𝑢𝑟𝑐𝑒 ℎ𝑚𝑠 𝅘𝅥𝅯⤶', url="t.me/hms_00"}},
+{{text = ' 𝑠𝑜𝑢𝑟𝑐𝑒 ℎ𝑚𝑠 2⤶', url="t.me/botatiiii"}},
 {{text = '𖢅⤈ 𝙱𝙰𝙲𝙺↵', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19554,8 +19550,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text ='「ＨＭＳ༗」»࿅ 𓀎',url="t.me/hms_01"},{text ='⌯𝘬ꪖ𝘴ꪖꫝꪖ 𝅘𝅥𝅮•', url="t.me/MR_AAS"}},
-{{text ='⌯𝙱𝙰𝚁𝙻𝙾•',url="t.me/bar_lo0o0"},{text ='⌯𝙶𝟾𝙰𝚉𝙰𝙻•', url="t.me/G8AZAAL"}},
+{{text ='「ＨＭＳ༗」»࿅ 𓀎',url="t.me/hms_01"},{text ='⌯𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴•', url="t.me/botatiiii"}},
 {{text = '𖢅⤈ 𝙱𝙰𝙲𝙺↵', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -22248,7 +22243,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = '⇣ ˹ꫝꪑ𝘴˼𓃠 ⇣',url='http://t.me/hms_00'}},
 }
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" ??⤈ ︙تم الطرد بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" 𖢅⤈ ︙تم الطرد بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 end,nil)   
 end
