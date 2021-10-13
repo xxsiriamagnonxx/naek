@@ -1817,7 +1817,7 @@ local keyboard = {
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
-
+end
 if text == "/start" then
 if not msa3d(msg) then
 if not Devban(msg) then
@@ -1865,55 +1865,8 @@ local Key = {
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
-if text == '•━═══『⚜قسم السورس⚜』═══━•' then
-local Text = 'مرحبا بك في قسم السورس'
-local Key = {
-{'عايز بوت'},
-{'همس'},
-{'𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴'},
-{'العوده🍂'},
-}
-send_inline_key(msg.chat_id_,Text,Key)
-end 
-if text == '•━═══『⚜قسم البوتات⚜』═══━•' then
-local Text = 'هنا ستجد قناه مختصه بكل بوتات المبرمج 😍'
-local Key = {
-{'همس'},
-{'𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴'},
-{'العوده🍂'},
-}
-send_inline_key(msg.chat_id_,Text,Key)
-end 
-if text == '•━═══『⚜قسم المميزات⚜』═══━•' then
-local Text = 'مميزات خاصه ب اللي منصبين مميزات '
-local Key = {
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'اغاني','مميزات'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'الافلام','العاب'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'قران','روايات'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'استوري'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'كشف الكذب','الترجمه'},
-{'𝔟𝔞𝔠𝔨 ⚡'},
-}
-send_inline_key(msg.chat_id_,Text,Key)
-end 
-if text == '•━═══『⚜قسم التواصل⚜』═══━•' then
-local Text = [[ 
-قناه مطورين السورس 🍂
-محتاج تنصب بوت حمايه ببلاش تواصل معانا✅
-]]
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'مطورين السورس⚙', url="t.me/hms_00"}}, 
-{{text = 'بوت التواصل', url="t.me/Towasolbot"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+
 if text and text:match("^/start ph(.*)$") then
 Sf = text:match("^/start ph(.*)$")
 local list = bot_data:smembers(ban_id.."filterphoto"..Sf)  
@@ -9832,7 +9785,7 @@ local hms_00 = bot_data:get(ban_id..'text:ch:user')
 if hms_00 then
 send(msg.chat_id_, msg.id_,'['..hms_00..']')
 else
-send(msg.chat_id_, msg.id_,' 𖢅⤈  لا تستطيع استخدام البوت \n 𖢅⤈   يرجى الاشتراك بالقناه اولا \n 𖢅⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ??⤈  لا تستطيع استخدام البوت \n 𖢅⤈   يرجى الاشتراك بالقناه اولا \n 𖢅⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
@@ -16215,7 +16168,7 @@ Msᴀɢ ~ #msgs
 [[
  𖢅⤈  - 𝓾𝓼𝓮𝓻 ➪ #username 𖢅⤈ .
  𖢅⤈  - 𝓼𝓽𝓪𝓼𝓽  ➪ #stast 𖢅⤈ .
- 𖢅⤈  - 𝓲?? ➪ #id ⸙ 𖢅⤈ .
+ 𖢅⤈  - 𝓲𝓭 ➪ #id ⸙ 𖢅⤈ .
  𖢅⤈  - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙ ??.
  𖢅⤈  - 𝓶𝓼𝓰𝓼 ➪ #msgs 𖢅⤈ .
  𖢅⤈  - 𝗖𝗛 - ❨@hms_00❩ 𖢅⤈ 
