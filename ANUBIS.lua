@@ -2624,7 +2624,6 @@ keyboard = {}
 keyboard.inline_keyboard = { 
 {{text = '𝙷ٍْ𝙼ٍْ𝚂ْ 𓃠🔗',url="t.me/hms_01"}},
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》',url="t.me/hms_00"}},
-{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/ddeneat/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -2637,7 +2636,6 @@ keyboard = {}
 keyboard.inline_keyboard = { 
 {{text = '𝙷ٍْ𝙼ٍْ𝚂ْ 𓃠🔗',url="t.me/hms_01"}},
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》',url="t.me/hms_00"}},
-{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/komedeee/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -16614,7 +16612,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
-► 𝗜𝗗 #id ?? ꙰
+► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
 ► 𝗶𝗗 - ❨@hms_00❩ ☆
@@ -16627,7 +16625,7 @@ Msᴀɢ ~ #msgs
 - 𝗶𝗗 🇺🇸 ꙰  ❨@hms_00❩ ☆
 ]],
 [[
-¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇵🇷.
+¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇵??.
 ¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇵🇷.
 ¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇵🇷.
 ¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇵🇷.
@@ -18640,7 +18638,7 @@ local Teext =[[
 اوامر المطورين ⇊
 ❨المطور ❩  ⇊
 •━═━═━═━˹ꫝꪑ𝘴˼𓃠 ═━═━═━•
- 𖢅⤈ تفعيل ↫ تعطيل 
+ ??⤈ تفعيل ↫ تعطيل 
  𖢅⤈ المجموعات ↫ المشتركين ↫ الاحصائيات
  𖢅⤈ رفع ↫ تنزيل منشئ اساسي
  𖢅⤈ مسح الاساسين ↫ المنشئين الاساسين
