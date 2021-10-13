@@ -1787,20 +1787,7 @@ return false
 end
 
 ------by-siria--
-if Chat_Type == 'UserBot' then
-if not Devban(msg) then
-if text == '/start' or text == 'العوده🍂' then  
-local bl = 'مرحبا بيك عزيزي العضو اليك الاوامر في الاسفل'
-local keyboard = {
-{'•━═══『⚜قسم الاستوريات⚜』═══━•'},
-{'•━═══『⚜قسم الالعاب⚜』═══━•'},
-{'•━═══『⚜قسم المميزات⚜』═══━•'},
-{'•━═══『⚜قسم السورس⚜』═══━•'},
-{'•━═══『⚜قسم البوتات⚜』═══━•'},
-{'•━═══『⚜قسم التواصل⚜』═══━•'},
-}
-send_inline_key(msg.chat_id_,bl,keyboard)
-end
+
 -------py-siria----
 if Chat_Type == 'UserBot' then
 if text == '/start' or text == '❨رجوع❩' then 
@@ -1858,53 +1845,7 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, l
 end
 end
 end
-if text == '•━═══『⚜قسم الاستوريات⚜』═══━•' then
-local Text = 'مرحبا بك في قسم الاستوريهات ستجد كل ما تحتاجه هنا 😍'
-local Key = {
-{'استوري'},
-{'•━═══『⚜استوري ديني⚜』═══━•'},
-{'•━═══『⚜استوري كوميدي⚜』═══━•'},
-{'العوده🍂'},
-}
-send_inline_key(msg.chat_id_,Text,Key)
-end 
 
-if text == '•━═══『⚜قسم السورس⚜』═══━•' then
-local Text = 'مرحبا بك في قسم السورس'
-local Key = {
-{'عايز بوت'},
-{'همس'},
-{'𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴'},
-{'العوده🍂'},
-}
-send_inline_key(msg.chat_id_,Text,Key)
-end 
-if text == '•━═══『⚜قسم البوتات⚜』═══━•' then
-local Text = 'هنا ستجد قناه مختصه بكل بوتات المبرمج 😍'
-local Key = {
-{'همس'},
-{'𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴'},
-{'العوده🍂'},
-}
-send_inline_key(msg.chat_id_,Text,Key)
-end 
-if text == '•━═══『⚜قسم المميزات⚜』═══━•' then
-local Text = 'مميزات خاصه ب اللي منصبين مميزات '
-local Key = {
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'اغاني','مميزات'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'الافلام','العاب'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'قران','روايات'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'استوري'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'كشف الكذب','الترجمه'},
-{'𝔟𝔞𝔠𝔨 ⚡'},
-}
-send_inline_key(msg.chat_id_,Text,Key)
-end 
 if text and text:match("^/start ph(.*)$") then
 Sf = text:match("^/start ph(.*)$")
 local list = bot_data:smembers(ban_id.."filterphoto"..Sf)  
@@ -2239,41 +2180,7 @@ end
 end 
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
 end
-if text == "سعر التنصيب" or text == "عايز بوت" then
-if not Devban(msg) then
-local Text = [[
-🔗سعر التنصيب علي سورس همس
-❀سعر التنصيب العادي للمصريين20جنيه فقط بدون مميزات
-❀سعر التنصيب العادي للسعوديين 20ريال فقط بدون مميزات
-❀سعر التنصيب العادي لليمنيين 20ريال سعودي بدون مميزات
-🔗للتواصل اتبع الازرار بالاسفل ⇓
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = ' 𝙷ٍْ𝙼ٍْ𝚂ْ 𓃠🔗',url="t.me/hms_01"}},
-{{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》',url="t.me/hms_00"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == "عايز سورس" then
-if not Devban(msg) then
-local Text = [[
-┌ سعر السورس عند فريق همس
-├ السورسات بتبدا مت100لي 240ج
-├ سعر المصنع200
-└ سعر السيرفر ،100,و 4 بي120, 8بي160
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = ' 𝙷ٍْ𝙼ٍْ𝚂ْ 𓃠🔗',url="t.me/hms_01"}},
-{{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》',url="t.me/hms_00"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
+
 if text == '❨تواصل السورس❩' and Devban(msg) then 
 local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
 local Key = {
@@ -2373,20 +2280,6 @@ if text == 'الاصدار' and Devban(msg) then
 bot_data:del(ban_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' 𖢅⤈  اصدار سورس همس{ S:1✓}')
 end
-if text == '•━═══『⚜قسم التواصل⚜』═══━•' then
-local Text = [[ 
-قناه مطورين السورس 🍂
-محتاج تنصب بوت حمايه ببلاش تواصل معانا✅
-]]
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'مطورين السورس⚙', url="t.me/hms_00"}}, 
-{{text = 'بوت التواصل', url="t.me/Towasolbot"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
 
 if text == 'معلومات الكيبورد' and Devban(msg) then
 bot_data:del(ban_id..'Srt:Bot') 
@@ -15937,7 +15830,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
-ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast ??🇬 ꙰
+ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast ???? ꙰
 ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
 ᯓ 𝗺𝗦𝗚𝗦 . #msgs 🇪🇬 ꙰
@@ -22355,7 +22248,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = '⇣ ˹ꫝꪑ𝘴˼𓃠 ⇣',url='http://t.me/hms_00'}},
 }
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" 𖢅⤈ ︙تم الطرد بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" ??⤈ ︙تم الطرد بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 end,nil)   
 end
