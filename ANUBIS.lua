@@ -1817,7 +1817,6 @@ local keyboard = {
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
 end
-end
 if text == "/start" then
 if not msa3d(msg) then
 if not Devban(msg) then
@@ -5893,7 +5892,7 @@ send(msg.chat_id_, msg.id_, " 𖢅⤈  لا يمكنك كتم مبرمج الس�
 return false 
 end
 if result.id_ == tonumber(0071000) then
-send(msg.chat_id_, msg.id_, " 𖢅⤈  لا يمكنك كتم مبرمج السورس \n")
+send(msg.chat_id_, msg.id_, " ??⤈  لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
 if result.id_ == tonumber(007100) then
@@ -15383,7 +15382,7 @@ local List = {
 [[
 𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
 𖤂 ~ 𝑚??𝑔 #msgs ??
-𖤂 ~ 𝑠𝑡𝑎 #stast  
+?? ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
 𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
 𖤂 ~ 𝗖𝗛 - ❨@hms_00❩ 𖢅⤈ .
@@ -15823,7 +15822,7 @@ Msᴀɢ ~ #msgs
 𝒔𝒕𝒂𓂅 #stast 𓍯
 𝐮𝐬𝐞𝐫𓂅 #username 𓍯
 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯
-𝐢𝐝 𓂅 #id 𓍯
+??𝐝 𓂅 #id 𓍯
 𓂅 𝗖𝗛 - ❨@hms_00❩ 💞.
 ]],
 [[
@@ -16258,7 +16257,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 ┇iD ➺ #id 💘
-┇UsEr ➺ #username 💕
+┇UsEr ➺ #username ??
 ┇MsG ➺ #msgs 🧸 
 ┇StAtE ➺ #stast 🎀
 ┇EdIT ➺ #edit  💒
