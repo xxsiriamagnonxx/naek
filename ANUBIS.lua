@@ -1884,6 +1884,7 @@ local Key = {
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
+end
 if text == '•━═══『⚜قسم المميزات⚜』═══━•' then
 local Text = 'مميزات خاصه ب اللي منصبين مميزات '
 local Key = {
@@ -1901,6 +1902,7 @@ local Key = {
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
+end
 if text == '•━═══『⚜قسم التواصل⚜』═══━•' then
 local Text = [[ 
 قناه مطورين السورس 🍂
@@ -1913,6 +1915,7 @@ keyboard.inline_keyboard = {
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 end
 if text and text:match("^/start ph(.*)$") then
 Sf = text:match("^/start ph(.*)$")
@@ -6979,7 +6982,7 @@ bot_data:del(ban_id..'Bot:Id'..msg.chat_id_)
 bot_data:del(ban_id..'Bot:Id:Photo'..msg.chat_id_) 
 bot_data:del(ban_id..'ghiktr'..msg.chat_id_) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' 𖢅⤈  تم تفعيل جلب الصوره ،\n 𖢅⤈  تم  فتح البوتات  ،\n ??⤈  تم  فتح التكرار ،\n 𖢅⤈  تم  فتح الروابط ،\n 𖢅⤈  تم  فتح التوجيه ،\n 𖢅⤈  تم  فتح الملصقات ،\n 𖢅⤈  تم  فتح المتحركه ،\n ?? تم  فتح الفيديو ،\n 𖢅⤈  تم  فتح الفشار ،\n 𖢅⤈  تم  فتح الانلاين ،\n 𖢅⤈  تم  فتح تعديل المديا ،\n 𖢅⤈  تم وضع التكرار  ،\n 𖢅⤈  تم  فتح الفارسيه  ،\n 𖢅⤈  تم وضع الايدي بصوره،n \n 𖢅⤈  تم تفعيل الحمايه  بواسطه ، [❨'..Rutba(msg.sender_user_id_,msg.chat_id_)..'❩](T.ME/'..(data.username_ or 'hms_00')..')  ')
+send(msg.chat_id_, msg.id_,' 𖢅⤈  تم تفعيل جلب الصوره ،\n 𖢅⤈  تم  فتح البوتات  ،\n 𖢅⤈  تم  فتح التكرار ،\n 𖢅⤈  تم  فتح الروابط ،\n 𖢅⤈  تم  فتح التوجيه ،\n 𖢅⤈  تم  فتح الملصقات ،\n 𖢅⤈  تم  فتح المتحركه ،\n ?? تم  فتح الفيديو ،\n 𖢅⤈  تم  فتح الفشار ،\n 𖢅⤈  تم  فتح الانلاين ،\n 𖢅⤈  تم  فتح تعديل المديا ،\n 𖢅⤈  تم وضع التكرار  ،\n 𖢅⤈  تم  فتح الفارسيه  ،\n 𖢅⤈  تم وضع الايدي بصوره،n \n 𖢅⤈  تم تفعيل الحمايه  بواسطه ، [❨'..Rutba(msg.sender_user_id_,msg.chat_id_)..'❩](T.ME/'..(data.username_ or 'hms_00')..')  ')
 end,nil)   
 end
 if text == 'تفعيل الحمايه القصوه'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
