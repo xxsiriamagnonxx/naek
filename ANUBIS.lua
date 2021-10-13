@@ -1817,7 +1817,7 @@ local keyboard = {
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
-end
+
 if text == "/start" then
 if not msa3d(msg) then
 if not Devban(msg) then
@@ -1865,7 +1865,6 @@ local Key = {
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
-end
 if text == '•━═══『⚜قسم السورس⚜』═══━•' then
 local Text = 'مرحبا بك في قسم السورس'
 local Key = {
@@ -1876,7 +1875,6 @@ local Key = {
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
-end
 if text == '•━═══『⚜قسم البوتات⚜』═══━•' then
 local Text = 'هنا ستجد قناه مختصه بكل بوتات المبرمج 😍'
 local Key = {
@@ -1886,7 +1884,6 @@ local Key = {
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
-end
 if text == '•━═══『⚜قسم المميزات⚜』═══━•' then
 local Text = 'مميزات خاصه ب اللي منصبين مميزات '
 local Key = {
@@ -1904,7 +1901,6 @@ local Key = {
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
-end
 if text == '•━═══『⚜قسم التواصل⚜』═══━•' then
 local Text = [[ 
 قناه مطورين السورس 🍂
@@ -1917,7 +1913,6 @@ keyboard.inline_keyboard = {
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
 end
 if text and text:match("^/start ph(.*)$") then
 Sf = text:match("^/start ph(.*)$")
@@ -2816,7 +2811,7 @@ local hms_00 = bot_data:get(ban_id..'text:ch:user')
 if hms_00 then
 send(msg.chat_id_, msg.id_,'['..hms_00..']')
 else
-send(msg.chat_id_, msg.id_,' 𖢅⤈  لا تستطيع استخدام البوت \n 𖢅⤈   يرجى الاشتراك بالقناه اولا \n ??⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' 𖢅⤈  لا تستطيع استخدام البوت \n 𖢅⤈   يرجى الاشتراك بالقناه اولا \n 𖢅⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
@@ -5687,7 +5682,7 @@ return false
 end
 if text == ("مسح الحظر العام") and Devban(msg) then
 bot_data:del(ban_id..'GDRG:User')
-send(msg.chat_id_, msg.id_, '\n ??⤈  تم مسح الحظر العام')
+send(msg.chat_id_, msg.id_, '\n 𖢅⤈  تم مسح الحظر العام')
 return false
 end
 if text == ("مسح الكتم العام") and Devban(msg) then
@@ -16220,7 +16215,7 @@ Msᴀɢ ~ #msgs
 [[
  𖢅⤈  - 𝓾𝓼𝓮𝓻 ➪ #username 𖢅⤈ .
  𖢅⤈  - 𝓼𝓽𝓪𝓼𝓽  ➪ #stast 𖢅⤈ .
- 𖢅⤈  - 𝓲𝓭 ➪ #id ⸙ 𖢅⤈ .
+ 𖢅⤈  - 𝓲?? ➪ #id ⸙ 𖢅⤈ .
  𖢅⤈  - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙ ??.
  𖢅⤈  - 𝓶𝓼𝓰𝓼 ➪ #msgs 𖢅⤈ .
  𖢅⤈  - 𝗖𝗛 - ❨@hms_00❩ 𖢅⤈ 
@@ -18667,7 +18662,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '??⤈ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
+{text = '𖢅⤈ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
 },
 {
 {text ='⌯اخفاء الكليشه⌯ ', callback_data="/hide"},
