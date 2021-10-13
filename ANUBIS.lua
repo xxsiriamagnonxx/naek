@@ -1839,21 +1839,7 @@ end
 end
 end
 
-if text == '/start' or text == 'العوده🍂' then  
-if not msa3d(msg) then
-if not Devban(msg) then
-local bl = 'مرحبا بيك عزيزي العضو اليك الاوامر في الاسفل'
-local keyboard = {
-{'قسم الالعاب'},
-{'قسم الالعاب'},
-{'قسم المميزات'},
-{'قسم السورس'},
-{'قسم الاستوري'},
-{'قسم التواصل'},
-}
-send_inline_key(msg.chat_id_,bl,keyboard)
-end
-end
+
 if text and text:match("^/start ph(.*)$") then
 Sf = text:match("^/start ph(.*)$")
 local list = bot_data:smembers(ban_id.."filterphoto"..Sf)  
@@ -12544,7 +12530,7 @@ bot_data:srem(ban_id..'GDRG:User',result.sender_user_id_)
 bot_data:srem(ban_id..'DRG:User'..msg.chat_id_,result.sender_user_id_)
 bot_data:srem(ban_id..'Muted:User'..msg.chat_id_,result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n ??⤈  الـعـضو   ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'hms_00')..')'
+usertext = '\n 𖢅⤈  الـعـضو   ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'hms_00')..')'
 status  = '\n 𖢅⤈  تم الغاء جميع القيود'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
