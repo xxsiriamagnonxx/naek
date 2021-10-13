@@ -1888,38 +1888,7 @@ local Key = {
 send_inline_key(msg.chat_id_,Text,Key)
 end 
 end
-if text == '•━═══『⚜قسم المميزات⚜』═══━•' then
-local Text = 'مميزات خاصه ب اللي منصبين مميزات '
-local Key = {
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'اغاني','مميزات'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'الافلام','العاب'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'قران','روايات'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'استوري'},
-{'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
-{'كشف الكذب','الترجمه'},
-{'𝔟𝔞𝔠𝔨 ⚡'},
-}
-send_inline_key(msg.chat_id_,Text,Key)
-end 
-end
-if text == '•━═══『⚜قسم التواصل⚜』═══━•' then
-local Text = [[ 
-قناه مطورين السورس 🍂
-محتاج تنصب بوت حمايه ببلاش تواصل معانا✅
-]]
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'مطورين السورس⚙', url="t.me/hms_00"}}, 
-{{text = 'بوت التواصل', url="t.me/Towasolbot"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
+
 
 if text and text:match("^/start ph(.*)$") then
 Sf = text:match("^/start ph(.*)$")
@@ -7589,7 +7558,7 @@ end,nil)
 elseif text == 'قفل الصوت بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 bot_data:set(ban_id.."lock:vico"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' 𖢅⤈   مـن قبـل  ↫ [❨'..Rutba(msg.sender_user_id_,msg.chat_id_)..'❩](T.ME/'..(data.username_ or 'hms_00')..') \n 𖢅⤈  تـم قفـل الصوت بالطرد ')
+send(msg.chat_id_, msg.id_,' 𖢅⤈   مـن قبـل  ↫ [❨'..Rutba(msg.sender_user_id_,msg.chat_id_)..'❩](T.ME/'..(data.username_ or 'hms_00')..') \n ??⤈  تـم قفـل الصوت بالطرد ')
 end,nil)   
 elseif text == 'فتح الصوت' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 bot_data:del(ban_id.."lock:vico"..msg.chat_id_)  
