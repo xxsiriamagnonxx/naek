@@ -1803,8 +1803,9 @@ end
 end
 end
 end
-if not Devban(msg) then
+
 if text == '/start' or text == 'العوده🍂' then  
+if not Devban(msg) then
 local bl = 'مرحبا بيك عزيزي العضو اليك الاوامر في الاسفل'
 local keyboard = {
 {'•━═══『⚜قسم الاستوريات⚜』═══━•'},
@@ -1854,6 +1855,7 @@ end
 end
 
 if text == '•━═══『⚜قسم الاستوريات⚜』═══━•' then
+if not Devban(msg) then
 local Text = 'مرحبا بك في قسم الاستوريهات ستجد كل ما تحتاجه هنا 😍'
 local Key = {
 {'استوري'},
@@ -9783,7 +9785,7 @@ local hms_00 = bot_data:get(ban_id..'text:ch:user')
 if hms_00 then
 send(msg.chat_id_, msg.id_,'['..hms_00..']')
 else
-send(msg.chat_id_, msg.id_,' 𖢅⤈  لا تستطيع استخدام البوت \n 𖢅⤈   يرجى الاشتراك بالقناه اولا \n 𖢅⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ??⤈  لا تستطيع استخدام البوت \n 𖢅⤈   يرجى الاشتراك بالقناه اولا \n 𖢅⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
@@ -17598,7 +17600,7 @@ datainline = {
 {{text ='⌯  ادمن',callback_data=data.sender_user_id_.."mod"..userid}},
 {{text ='⌯  مدير',callback_data=data.sender_user_id_.."Manager"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."Bbk"..userid}},
-{{text = ' ˹ꫝꪑ𝘴˼??', url="t.me/hms_00"}},
+{{text = ' ˹ꫝꪑ𝘴˼𓃠', url="t.me/hms_00"}},
 }
 else
 datainlineText = "لا يمتلك رتبه"
