@@ -1853,6 +1853,7 @@ local keyboard = {
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 end
+end
 if text and text:match("^/start ph(.*)$") then
 Sf = text:match("^/start ph(.*)$")
 local list = bot_data:smembers(ban_id.."filterphoto"..Sf)  
@@ -12543,7 +12544,7 @@ bot_data:srem(ban_id..'GDRG:User',result.sender_user_id_)
 bot_data:srem(ban_id..'DRG:User'..msg.chat_id_,result.sender_user_id_)
 bot_data:srem(ban_id..'Muted:User'..msg.chat_id_,result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n 𖢅⤈  الـعـضو   ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'hms_00')..')'
+usertext = '\n ??⤈  الـعـضو   ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'hms_00')..')'
 status  = '\n 𖢅⤈  تم الغاء جميع القيود'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -15820,7 +15821,7 @@ Msᴀɢ ~ #msgs
 [[
 𝒔𝒕𝒂𓂅 #stast 𓍯
 𝐮𝐬𝐞𝐫𓂅 #username 𓍯
-𝒎𝒔𝒈𝒆𓂅 #msgs ??
+𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯
 𝐢𝐝 𓂅 #id 𓍯
 𓂅 𝗖𝗛 - ❨@hms_00❩ 💞.
 ]],
