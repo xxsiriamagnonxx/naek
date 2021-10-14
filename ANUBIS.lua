@@ -1904,7 +1904,7 @@ local Key = {
 {'استوري'},
 {'•━═══『⚜𝙷𝙼𝚂⚜』═══━•'},
 {'كشف الكذب','الترجمه'},
-{'𝔟𝔞𝔠𝔨 ⚡'},
+{'العوده🍂'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
@@ -2455,7 +2455,7 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '𝘀𝗼𝗿𝗰𝗲 𝗮𝗻𝘂𝗯𝗶𝘀 ⁦˖꒰', url = "https://t.me/hms_00"},
+{text = '˹ꫝꪑ𝘴˼𓃠𝘀 ⁦˖꒰', url = "https://t.me/hms_00"},
 },
 }
 local function getpro(extra, result, success) 
@@ -6484,7 +6484,7 @@ local bana = {
 	
 "⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑 ★",
 
-"𖢅⤈↫𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑| 🖤⌯",
+"𖢅⤈↫𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮??𝒐𝒖𝒑| 🖤⌯",
 
 }
 local rdphoto = bana[math.random(#bana)]
@@ -14903,7 +14903,7 @@ local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '𝘀𝗼𝗿𝗰𝗲 𝗮𝗻𝘂𝗯𝗶?? ⁦˖꒰', url = "https://t.me/hms_00"},
+{text = '˹ꫝꪑ𝘴˼𓃠˖꒰', url = "https://t.me/hms_00"},
 },
 }
 local function getpro(extra, result, success) 
@@ -15351,7 +15351,7 @@ local List = {
 ]],
 [[
 ??🇵 - 𝄬 username . #username  𓃠
-🇯🇵 - 𝄬 stast . #stast  𓃠
+🇯🇵 - ?? stast . #stast  𓃠
 🇯🇵 - 𝄬 id . #id 𓃠
 🇯🇵 - 𝄬 gmas . #gmas 𓃠
 🇯🇵 - 𝄬 msgs . #msgs  ??
