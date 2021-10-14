@@ -5621,6 +5621,73 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/m3lomaaa/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+if text == '𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴' then
+local Text = [[ 
+🔗من أحسن السورسات على التليجرام سورس همس🔗
+بجد سورس أمان جدا وفي مميزات جامده
+تع نصب بوتك عندنا لو محظور
+خش علي تواصل هيدخلك قناه اليوزرات تواصل معنا 💛. 
+]]
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》', url="t.me/hms_00"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/V_I_K_I_N_G_2/79/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == '𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴'  then
+bot_data:del(ban_id..'Srt:Bot') 
+local Text = [[ 
+[TWL](t.me/hms_01)
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '《𝙻𝚃𝚄𝙰𝚂𝙸𝙻 𝚂𝙾𝚄𝚁𝙲𝙴 》', url="t.me/hms_01"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/V_I_K_I_N_G_2/79/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'مميزات'  or text == 'المميزات' then
+local Text = [[ 
+ ───────🔗───────
+🔗لستخدام المميزات اتبع مايلي ..↑↓
+ ───────🔗───────
+🔗قران ← لعرض الميزه
+🔗اذكار ← لعرض الميزه
+🔗الصلاوات ← لعرض الميزه
+🔗متحركه ← لعرض الميزه
+🔗غنيلي ← لعرض الميزه
+🔗استوري ← لعرض الميزه
+🔗استوري ديني ← لعرض الميزه
+🔗استوري كوميدي ← لعرض الميزه
+🔗هل تعلم ← لعرض الميزه
+🔗تصميم ← لعرض الميزه
+🔗حساب العمر ← لعرض الميزه
+🔗حساب الوزن ← لعرض الميزه
+🔗نسبه الحب ← لعرض الميزه
+🔗نسبه الغباء ← لعرض الميزه
+🔗جمالي ← لعرض الميزه
+🔗افلام ← لعرض الميزه
+🔗اغاني ← لعرض الميزه
+🔗روايات ← لعرض الميزه
+🔗ثيم ← لعرض الميزه
+🔗همسه ← لعرض الميزه
+🔗معني + اسمك ← لعرض الميزه
+🔗خلفيات ← لعرض الميزه
+╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
+🔗𝘾𝙃 - [《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》](t.me/hms_00) 
+╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
+]]
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '❨  𖣘• ⁽𝙷𝙼𝚂₎ •𖣘 ❩', url="t.me/hms_01"}},
+{{text = '❨  𖣘• ⁽𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂₎ •𖣘 ❩', url="t.me/hms_00"}},
+{{text = '❨تحديث السورس❩', url="t.me/hms_sorec"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/msmswork/10/69&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
 if text and (text == "انمي" or text == "↫ انمي ♡") and not bot_data:get(ban_id..'ban:Anime:ban'..msg.chat_id_) then
 ban = math.random(3,1002); 
 local Text ='*♡︙تم اختيار صورة الانمي لك*'
@@ -20655,7 +20722,7 @@ bot_data:del(ban_id.."my_anamen:status"..Chat_id)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '𖢅⤈ 𝙱𝙰??𝙺↵', callback_data="/help8"},
+{text = '𖢅⤈ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
