@@ -5623,30 +5623,19 @@ https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. ms
 end
 if text == 'بوتاتي' then
 local Text = [[ 
-🔗من أحسن السورسات على التليجرام سورس همس🔗
-بجد سورس أمان جدا وفي مميزات جامده
-تع نصب بوتك عندنا لو محظور
-خش علي تواصل هيدخلك قناه اليوزرات تواصل معنا 💛. 
+🔗مرحبا بك في قسم البوتات🔗
+الخاصه بسورس همسر
+ستجد بعد الضغط علي الزرار بالاسفل
+كل البوتات التي تحتاج اليها
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》', url="t.me/hms_00"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/V_I_K_I_N_G_2/79/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/msmswork/6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'بوتاتي'  then
-bot_data:del(ban_id..'Srt:Bot') 
-local Text = [[ 
-[TWL](t.me/hms_01)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '《𝙻𝚃𝚄𝙰𝚂𝙸𝙻 𝚂𝙾𝚄𝚁𝙲𝙴 》', url="t.me/hms_01"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/V_I_K_I_N_G_2/79/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
+
 
 if text == 'مميزات'  or text == 'المميزات' then
 local Text = [[ 
@@ -10415,7 +10404,7 @@ local hms_00 = bot_data:get(ban_id..'text:ch:user')
 if hms_00 then
 send(msg.chat_id_, msg.id_,'['..hms_00..']')
 else
-send(msg.chat_id_, msg.id_,' 𖢅⤈  لا تستطيع استخدام البوت \n 𖢅⤈   يرجى الاشتراك بالقناه اولا \n 𖢅⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' 𖢅⤈  لا تستطيع استخدام البوت \n 𖢅⤈   يرجى الاشتراك بالقناه اولا \n ??⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
@@ -10610,7 +10599,7 @@ function start_function(extra, result, success)
 bot_data:srem(ban_id..'Modde:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n 𖢅⤈  العضــو  ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'hms_00')..')'
-status  = '\n 𖢅⤈  تم تنزيل العضــو كلب من الجروب\n'
+status  = '\n ??⤈  تم تنزيل العضــو كلب من الجروب\n'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -15654,7 +15643,7 @@ local List = {
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 🇪🇬 ꙰  - 𝚞 𝚜𝚎 𝚛 ➟ #username  ❃.
 🇪🇬 ꙰  - 𝚖 𝚜𝚐 𝚜 ➟ #msgs ❃.
-🇪?? ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
+🇪🇬 ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
 🇪🇬 ꙰  - 𝙸𝙳 𝚜𝚝??   ➟ #id ❃.
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 🇪🇬 ꙰  - 𝗖𝗛 - ❨@hms_00❩ 𖢅⤈ .
@@ -17829,7 +17818,7 @@ elseif bot_data:sismember(ban_id..'Manager'..Chat_id,userid) then
 datainlineText = "عذرا الشخص يمتلك رتبه اعلى من رتبتك"
 datainline = {
 {{text = 'رجوع',callback_data=data.sender_user_id_.."Bbk"..userid}},
-{{text = ' ˹ꫝꪑ𝘴˼𓃠', url="t.me/hms_00"}},
+{{text = ' ˹ꫝꪑ??˼𓃠', url="t.me/hms_00"}},
 }
 elseif bot_data:sismember(ban_id..'Mod:User'..Chat_id,userid) then
 datainlineText = "عذرا الشخص يمتلك رتبه مشابهه ل رتبتك"
