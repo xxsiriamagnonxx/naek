@@ -1873,7 +1873,7 @@ local Text = 'مرحبا بك في قسم السورس'
 local Key = {
 {'عايز بوت'},
 {'همس'},
-{'𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴'},
+{'بوتاتي'},
 {'العوده🍂'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
@@ -1884,7 +1884,7 @@ if not Devban(msg) then
 local Text = 'هنا ستجد قناه مختصه بكل بوتات المبرمج 😍'
 local Key = {
 {'همس'},
-{'𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴'},
+{'بوتاتي'},
 {'العوده🍂'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
@@ -5621,7 +5621,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/m3lomaaa/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == '𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴' then
+if text == 'بوتاتي' then
 local Text = [[ 
 🔗من أحسن السورسات على التليجرام سورس همس🔗
 بجد سورس أمان جدا وفي مميزات جامده
@@ -5635,7 +5635,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/V_I_K_I_N_G_2/79/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == '𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴'  then
+if text == 'بوتاتي'  then
 bot_data:del(ban_id..'Srt:Bot') 
 local Text = [[ 
 [TWL](t.me/hms_01)
@@ -15654,7 +15654,7 @@ local List = {
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 🇪🇬 ꙰  - 𝚞 𝚜𝚎 𝚛 ➟ #username  ❃.
 🇪🇬 ꙰  - 𝚖 𝚜𝚐 𝚜 ➟ #msgs ❃.
-🇪🇬 ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
+🇪?? ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
 🇪🇬 ꙰  - 𝙸𝙳 𝚜𝚝??   ➟ #id ❃.
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 🇪🇬 ꙰  - 𝗖𝗛 - ❨@hms_00❩ 𖢅⤈ .
@@ -19633,7 +19633,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text ='「ＨＭＳ༗」»࿅ 𓀎',url="t.me/hms_01"},{text ='⌯𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴', url="t.me/MR_AAS"}},
+{{text ='「ＨＭＳ༗」»࿅ 𓀎',url="t.me/hms_01"},{text ='⌯بوتاتي', url="t.me/MR_AAS"}},
 {{text = ' مــطــور الــبــوت 𖢅⤈↫', url="http://t.me/"..sudos.UserName}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19662,7 +19662,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𖢅⤈ ♔𝙷𝙼𝚂♔',url="t.me/hms_00"},{text = '𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴',url="t.me/botatiiii"}},
+{{text = '𖢅⤈ ♔𝙷𝙼𝚂♔',url="t.me/hms_00"},{text = 'بوتاتي',url="t.me/botatiiii"}},
 {{text = '𖢅⤈ 𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19691,7 +19691,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴',url="t.me/botatiiii"}},
+{{text = 'بوتاتي',url="t.me/botatiiii"}},
 {{text = '𖢅⤈ 𝙱𝙰𝙲𝙺↵', callback_data="/bnada-yquio"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19729,7 +19729,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text ='「ＨＭＳ༗」»࿅ 𓀎',url="t.me/hms_01"},{text ='⌯𝙼𝙰𝚈 𝙱𝙾𝚃𝚂 𖣴•', url="t.me/botatiiii"}},
+{{text ='「ＨＭＳ༗」»࿅ 𓀎',url="t.me/hms_01"},{text ='⌯بوتاتي•', url="t.me/botatiiii"}},
 {{text = '𖢅⤈ 𝙱𝙰𝙲𝙺↵', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
