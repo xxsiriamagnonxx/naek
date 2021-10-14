@@ -2588,7 +2588,7 @@ end,nil)
 end
 return false
 end
-if text == "•━═══『⚜استوري ديني⚜』═══━•" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
+if text == "•━═══『⚜استوري ديني⚜』═══━•" or text == 'استوري ديني' and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(2,22); 
 local Text ='تم اختيار استوري ديني لك' 
 keyboard = {}  
@@ -5585,6 +5585,41 @@ keyboard.inline_keyboard = {
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot" ..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/PhotosDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == "•━═══『⚜استوري ديني⚜』═══━•" or text == 'استوري ديني' and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(2,22); 
+local Text ='تم اختيار استوري ديني لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '𝙷ٍْ𝙼ٍْ𝚂ْ 𓃠🔗',url="t.me/hms_01"}},
+{{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》',url="t.me/hms_00"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/ddeneat/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == "استوري كوميدي" or text == '•━═══『⚜استوري كوميدي⚜』═══━•' and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
+ban = math.random(2,50); 
+local Text ='تم اختيار استوري كوميدي لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '𝙷ٍْ𝙼ٍْ𝚂ْ 𓃠🔗',url="t.me/hms_01"}},
+{{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》',url="t.me/hms_00"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/komedeee/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == "هل تعلم" or text == 'معلومه' and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
+ban = math.random(1,50); 
+local Text ='تم اختيار هذه المعلومه لـك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '𝙷ٍْ𝙼ٍْ𝚂ْ 𓃠🔗',url="t.me/hms_01"}},
+{{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》',url="t.me/hms_00"}},
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/m3lomaaa/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text and (text == "انمي" or text == "↫ انمي ♡") and not bot_data:get(ban_id..'ban:Anime:ban'..msg.chat_id_) then
 ban = math.random(3,1002); 
@@ -20620,7 +20655,7 @@ bot_data:del(ban_id.."my_anamen:status"..Chat_id)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '𖢅⤈ 𝙱𝙰𝙲𝙺↵', callback_data="/help8"},
+{text = '𖢅⤈ 𝙱𝙰??𝙺↵', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
