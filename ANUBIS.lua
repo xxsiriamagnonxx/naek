@@ -5551,7 +5551,7 @@ ban = math.random(2,1201);
 local Text ='*♡︙تم اختيار مقطع الميمز لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '♡ Siria team .',url="t.me/hms_00"}},
+{{text = '♡ hms',url="t.me/hms_00"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot" ..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/MemzDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -5581,7 +5581,7 @@ ban = math.random(4,1122);
 local Text ='*♡︙تم اختيار الصوره لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '♡ Siria team .',url="t.me/hms_00"}},
+{{text = '♡ hms',url="t.me/hms_00"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot" ..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/PhotosDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -5630,7 +5630,7 @@ local Text = [[
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》', url="t.me/hms_00"}}, 
+{{text = '《𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙼𝚂》', url="t.me/botatiiii"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/msmswork/6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -5682,7 +5682,7 @@ ban = math.random(3,1002);
 local Text ='*♡︙تم اختيار صورة الانمي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '♡ Siria team .',url="t.me/hms_00"}},
+{{text = '♡ hms',url="t.me/hms_00"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AnimeDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -5692,7 +5692,7 @@ ban = math.random(45,125);
 local Text ='*♡︙تم اختيار الفلم لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '♡ Siria team .',url="t.me/hms_00"}},
+{{text = '♡ hms',url="t.me/hms_00"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot" ..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MoviesDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -5702,7 +5702,7 @@ ban = math.random(2,54);
 local Text ='*♡︙تم اختيار المسلسل لك*'
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '♡ Siria team .',url="t.me/hms_00"}},
+{{text = '♡ hms',url="t.me/hms_00"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot" ..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SeriesDavid/'..ban..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -10404,7 +10404,7 @@ local hms_00 = bot_data:get(ban_id..'text:ch:user')
 if hms_00 then
 send(msg.chat_id_, msg.id_,'['..hms_00..']')
 else
-send(msg.chat_id_, msg.id_,' 𖢅⤈  لا تستطيع استخدام البوت \n 𖢅⤈   يرجى الاشتراك بالقناه اولا \n ??⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' 𖢅⤈  لا تستطيع استخدام البوت \n 𖢅⤈   يرجى الاشتراك بالقناه اولا \n 𖢅⤈   اشترك هنا ['..bot_data:get(ban_id..'add:ch:username')..']')
 end
 return false
 end
@@ -10599,7 +10599,7 @@ function start_function(extra, result, success)
 bot_data:srem(ban_id..'Modde:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n 𖢅⤈  العضــو  ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'hms_00')..')'
-status  = '\n ??⤈  تم تنزيل العضــو كلب من الجروب\n'
+status  = '\n 𖢅⤈  تم تنزيل العضــو كلب من الجروب\n'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -15672,7 +15672,7 @@ local List = {
 [[
 ➼ : ??𝐷 𖠀 #id . ♡
 ➼ : 𝑈𝑆𝐸𝑅 𖠀 #username .♡
-➼ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .♡
+➼ : ??𝑆𝐺𝑆 𖠀 #msgs .♡
 ➼ : 𝑆𝑇𝐴S𝑇 𖠀 #stast .♡ 
 ➼ : 𝐸𝐷𝐼𝑇  𖠀 #edit .♡
 ➼ : 𝗖𝗛 - ❨@hms_00❩ 𖢅⤈ .
@@ -16114,7 +16114,7 @@ Msᴀɢ ~ #msgs
 𓅓➪ : Iᗪ : #id - ❦ . 
 𓅓➪ : ᔕTᗩᔕT : #stast - ❦ . 
 𓅓➪ : ᑌᔕᖇᗴᑎᗩᗰᗴ : #username _ ❦ .
-𓅓➪ : 𝗖𝗛 - ❨@hms_00❩ 𖢅⤈ 
+𓅓➪ : 𝗖𝗛 - ❨@hms_00❩ ??⤈ 
 ]],
 [[
 - ايديڪ  ⁞ #id 💘 ٬
@@ -17818,7 +17818,7 @@ elseif bot_data:sismember(ban_id..'Manager'..Chat_id,userid) then
 datainlineText = "عذرا الشخص يمتلك رتبه اعلى من رتبتك"
 datainline = {
 {{text = 'رجوع',callback_data=data.sender_user_id_.."Bbk"..userid}},
-{{text = ' ˹ꫝꪑ??˼𓃠', url="t.me/hms_00"}},
+{{text = ' ˹ꫝꪑ𝘴˼𓃠', url="t.me/hms_00"}},
 }
 elseif bot_data:sismember(ban_id..'Mod:User'..Chat_id,userid) then
 datainlineText = "عذرا الشخص يمتلك رتبه مشابهه ل رتبتك"
